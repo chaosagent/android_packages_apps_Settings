@@ -576,6 +576,8 @@
     <string name="settings_label">Settings</string>
     <!-- Title of the Settings activity shown in the Launcher. [CHAR LIMIT=20] -->
     <string name="settings_label_launcher">Settings</string>
+    <!-- TRDS Settings -->
+    <string name="trds_settings_title">The Real Dark Slim</string>
     <!-- Label for option to select a settings panel as a shortcut -->
     <string name="settings_shortcut">Settings shortcut</string>
     <!-- Wireless controls settings screen, setting check box label -->
