@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2012-2013 The CyanogenMod Project
+     Copyright (C) 2012-2013 The CyanFox Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -58,20 +58,20 @@
     <string name="notification_vibrate_during_calls_title">Vibrar durante llamadas</string>
     <string name="notification_vibrate_during_calls_summary">Las notificaciones entrantes vibrarán levemente durante una llamada</string>
     <string name="device_hostname">Nombre del dispositivo</string>
-    <string name="mod_version">Versión CyanogenMod</string>
+    <string name="mod_version">Versión CyanFox</string>
     <string name="mod_version_default">Desconocida</string>
     <string name="build_date">Fecha de compilación</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memoria</string>
-    <string name="anonymous_statistics_title">Estadísticas CyanogenMod</string>
-    <string name="anonymous_statistics_summary">Ayuda a mejorar CyanogenMod mediante el envío anónimo de estadísticas</string>
+    <string name="anonymous_statistics_title">Estadísticas CyanFox</string>
+    <string name="anonymous_statistics_summary">Ayuda a mejorar CyanFox mediante el envío anónimo de estadísticas</string>
     <string name="anonymous_statistics_warning_title">Aviso</string>
-    <string name="anonymous_statistics_warning">Permitiendo la recopilación y envío de estadísticas de CyanogenMod, autorizas el envío de información de carácter no personal a los desarrolladores de CyanogenMod para hacer un seguimiento de las instalaciones que realices en los dispositivos. La información enviada incluye un identificador único que no compromete tu privacidad ni tu información personal. Esta información es enviada durante el arranque.\n\nPara ver un ejemplo de la información enviada, pulsa en \u00ABPrevisualizar datos\u00BB</string>
+    <string name="anonymous_statistics_warning">Permitiendo la recopilación y envío de estadísticas de CyanFox, autorizas el envío de información de carácter no personal a los desarrolladores de CyanFox para hacer un seguimiento de las instalaciones que realices en los dispositivos. La información enviada incluye un identificador único que no compromete tu privacidad ni tu información personal. Esta información es enviada durante el arranque.\n\nPara ver un ejemplo de la información enviada, pulsa en \u00ABPrevisualizar datos\u00BB</string>
     <string name="enable_reporting_title">Activar envío estadísticas</string>
     <string name="preview_data_title">Previsualizar datos</string>
     <string name="view_stats_title">Ver estadísticas</string>
     <string name="anonymous_learn_more">Leer más</string>
-    <string name="anonymous_notification_desc">Activar o desactivar estadísticas de CyanogenMod</string>
+    <string name="anonymous_notification_desc">Activar o desactivar estadísticas de CyanFox</string>
     <string name="preview_id_title">Identificador único</string>
     <string name="preview_device_title">Dispositivo</string>
     <string name="preview_version_title">Versión</string>
@@ -440,7 +440,7 @@
     <string name="power_menu_airplane_title">Modo avión</string>
     <string name="power_menu_user_title">Cambiar de usuario</string>
     <string name="power_menu_sound_title">Panel de sonido</string>
-    <string name="cmupdate_settings_title">Actualizaciones CyanogenMod</string>
+    <string name="cmupdate_settings_title">Actualizaciones CyanFox</string>
     <string name="cmupdate_settings_summary">Comprobar, ver e instalar actualizaciones disponibles</string>
     <string name="advanced_settings_title">Opciones avanzadas</string>
     <string name="ime_switcher_notify">Selector en notificaciones</string>
@@ -570,7 +570,7 @@
     <string name="headset_connect_player_summary">Iniciar el reproductor de música por defecto al conectar los auriculares</string>
     <string name="safe_headset_volume_title">Volumen seguro</string>
     <string name="cyanogenmod_waiver_title">Renuncia</string>
-    <string name="cyanogenmod_waiver_body">Cambiar este ajuste puede ir en contra de la leyes de tu estado o país.\n\nPulsando \u00ABAceptar\u00BB, reconoces esta advertencia y eximes de cualquier responsabilidad legal a CyanogenMod y sus colaboradores, renunciando así a cualquier reclamación por daños y perjuicios.</string>
+    <string name="cyanogenmod_waiver_body">Cambiar este ajuste puede ir en contra de la leyes de tu estado o país.\n\nPulsando \u00ABAceptar\u00BB, reconoces esta advertencia y eximes de cualquier responsabilidad legal a CyanFox y sus colaboradores, renunciando así a cualquier reclamación por daños y perjuicios.</string>
     <string name="auto_brightness_setup_title">Brillo automático</string>
     <string name="auto_brightness_adjustment_title">Ajustar brillo</string>
     <string name="auto_brightness_twilight_adjustment">Ajustar a la salida y puesta del sol</string>

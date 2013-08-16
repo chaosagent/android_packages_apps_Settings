@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 The CyanogenMod Project
+<!-- Copyright (C) 2013 The CyanFox Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -54,20 +54,20 @@
     <string name="notification_convert_sound_to_vibration_title">Bildirimlerde titre</string>
     <string name="notification_convert_sound_to_vibration_summary">Titreşim modunda uygulama ayarlarından bağımsız olarak her bildirim titreyecektir</string>
     <string name="device_hostname">Cihaz hostname\'i</string>
-    <string name="mod_version">CyanogenMod sürümü</string>
+    <string name="mod_version">CyanFox sürümü</string>
     <string name="mod_version_default">Bilinmiyor</string>
     <string name="build_date">İnşa tarihi</string>
     <string name="cpu_info">İşlemci</string>
     <string name="mem_info">Bellek</string>
-    <string name="anonymous_statistics_title">CyanogenMod istatistikleri</string>
-    <string name="anonymous_statistics_summary">Anonim istatistik raporları göndererek CyanogenMod\'un daha iyi olmasına yardım edin</string>
+    <string name="anonymous_statistics_title">CyanFox istatistikleri</string>
+    <string name="anonymous_statistics_summary">Anonim istatistik raporları göndererek CyanFox\'un daha iyi olmasına yardım edin</string>
     <string name="anonymous_statistics_warning_title">Hakkında</string>
-    <string name="anonymous_statistics_warning">CyanogenMod İstatistiklerine dahil olmak kişisel olmayan verilerin CyanogenMod geliştirilerine cihazlar arasındaki benzersiz yüklemeleri tahip etmeleri için gönderilmesine izin verir. Bu bilgi kişisel bilgi içermeyen ve gizliliğinizi tehtit etmeyen bir benzersiz numara da içerir. Veri her başlangıçta gönderilir.\n\nGönderilecek verinin örneğini görmek için Veriyi önizle butonunu kullanın. </string>
+    <string name="anonymous_statistics_warning">CyanFox İstatistiklerine dahil olmak kişisel olmayan verilerin CyanFox geliştirilerine cihazlar arasındaki benzersiz yüklemeleri tahip etmeleri için gönderilmesine izin verir. Bu bilgi kişisel bilgi içermeyen ve gizliliğinizi tehtit etmeyen bir benzersiz numara da içerir. Veri her başlangıçta gönderilir.\n\nGönderilecek verinin örneğini görmek için Veriyi önizle butonunu kullanın. </string>
     <string name="enable_reporting_title">Raporlamayı etkinleştir</string>
     <string name="preview_data_title">Veriyi önizle</string>
     <string name="view_stats_title">İstatistikleri görüntüle</string>
     <string name="anonymous_learn_more">Fazlasını öğren</string>
-    <string name="anonymous_notification_desc">CyanogenMod İstatistiklerini aç/kapat</string>
+    <string name="anonymous_notification_desc">CyanFox İstatistiklerini aç/kapat</string>
     <string name="preview_id_title">Benzersiz ID</string>
     <string name="preview_device_title">Cihaz</string>
     <string name="preview_version_title">Sürüm</string>
@@ -397,7 +397,7 @@
     <string name="power_menu_airplane_title">Uçak modu</string>
     <string name="power_menu_user_title">Kullanıcı değiştirici</string>
     <string name="power_menu_sound_title">Ses paneli</string>
-    <string name="cmupdate_settings_title">CyanogenMod güncellemeleri</string>
+    <string name="cmupdate_settings_title">CyanFox güncellemeleri</string>
     <string name="cmupdate_settings_summary">Güncellemeleri denetleyin, görüntüleyin ve yükleyin</string>
     <string name="advanced_settings_title">Gelişmiş</string>
     <string name="ime_switcher_notify">Giriş modu bildirimi</string>
@@ -516,7 +516,7 @@
     <string name="headset_connect_player_title">Müzik uygulamasını başlat</string>
     <string name="headset_connect_player_summary">Kulaklık takıldığında varsayılan müzik uygulamasını başlat</string>
     <string name="cyanogenmod_waiver_title">Feragat</string>
-    <string name="cyanogenmod_waiver_body">Bu ayaları değiştirme hükümet ya da eyaletinizin yasalarına aykırı olabilir.\n\nAşağıdan \'Tamam\' butonuna bastığınızda bu uyarı ve feragat\'ı dikkate aldığınız ve CyanogenMod ve katkıcılarını her türlü cezai yükümlülükten sorumlu tutmayacağınızı kabul ediyorsunuz.</string>
+    <string name="cyanogenmod_waiver_body">Bu ayaları değiştirme hükümet ya da eyaletinizin yasalarına aykırı olabilir.\n\nAşağıdan \'Tamam\' butonuna bastığınızda bu uyarı ve feragat\'ı dikkate aldığınız ve CyanFox ve katkıcılarını her türlü cezai yükümlülükten sorumlu tutmayacağınızı kabul ediyorsunuz.</string>
     <string name="light_sensor_current_value">Şu anki ışık sensörü değeri: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Automatic brightness levels</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>

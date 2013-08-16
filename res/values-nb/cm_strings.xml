@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2013 The CyanFox Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -54,22 +54,22 @@
     <string name="notification_convert_sound_to_vibration_title">Vibrer ved varsler</string>
     <string name="notification_convert_sound_to_vibration_summary">I vibreringsmodus vil alle varslinger vibrere, uavhengig av individuelle appinnstillinger</string>
     <string name="device_hostname">Enhetens vertsnavn</string>
-    <string name="mod_version">CyanogenMod versjon</string>
+    <string name="mod_version">CyanFox versjon</string>
     <string name="mod_version_default">Ukjent</string>
     <string name="build_date">Byggdato</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Minne</string>
-    <string name="anonymous_statistics_title">CyanogenMod-statistikk</string>
-    <string name="anonymous_statistics_summary">Bidra til å gjøre CyanogenMod bedre ved å sende inn anonym statistikk.</string>
+    <string name="anonymous_statistics_title">CyanFox-statistikk</string>
+    <string name="anonymous_statistics_summary">Bidra til å gjøre CyanFox bedre ved å sende inn anonym statistikk.</string>
     <string name="anonymous_statistics_warning_title">Om</string>
     <string name="anonymous_statistics_warning">Ved å velge å sende inn statistikk til Cyanogenmod vil ikke-personlige data sendes til utviklerne
-        av CyanogenMod slik at de kan spore ulike installasjoner på tvers av enheter. Dataene blir sendt under hver oppstart.\n\nFor å
+        av CyanFox slik at de kan spore ulike installasjoner på tvers av enheter. Dataene blir sendt under hver oppstart.\n\nFor å
         se hvilke data som sendes, trykk på Forhåndsvis Data.</string>
     <string name="enable_reporting_title">Aktiver rapportering</string>
     <string name="preview_data_title">Forhåndsvis data</string>
     <string name="view_stats_title">Se statistikk</string>
     <string name="anonymous_learn_more">Lær mer</string>
-    <string name="anonymous_notification_desc">Aktiver eller deaktiver CyanogenMod-statistikk</string>
+    <string name="anonymous_notification_desc">Aktiver eller deaktiver CyanFox-statistikk</string>
     <string name="preview_id_title">Unik ID</string>
     <string name="preview_device_title">Enhet</string>
     <string name="preview_version_title">Versjon</string>
@@ -397,7 +397,7 @@
     <string name="power_menu_airplane_title">Flymodus</string>
     <string name="power_menu_user_title">Brukervelger</string>
     <string name="power_menu_sound_title">Lydpanel</string>
-    <string name="cmupdate_settings_title">CyanogenMod-oppdateringer</string>
+    <string name="cmupdate_settings_title">CyanFox-oppdateringer</string>
     <string name="cmupdate_settings_summary">Vis, se etter eller installer tilgjengelige oppdateringer</string>
     <string name="advanced_settings_title">Avansert</string>
     <string name="ime_switcher_notify">IME-varsling</string>
@@ -516,7 +516,7 @@
     <string name="headset_connect_player_title">Start musikkapp</string>
     <string name="headset_connect_player_summary">Start musikkappen som er satt som standard når hodetelefoner tilkobles</string>
     <string name="cyanogenmod_waiver_title">Opphevelse</string>
-    <string name="cyanogenmod_waiver_body">Å endre denne innstillingen kan være mot loven.\n\nVed å velge \'OK\' nedenfor, godtar du denne advarslen og opphevelsen, sikrer og holder CyanogenMod og dens bidragsytere fra alle juridiske forpliktelser.</string>
+    <string name="cyanogenmod_waiver_body">Å endre denne innstillingen kan være mot loven.\n\nVed å velge \'OK\' nedenfor, godtar du denne advarslen og opphevelsen, sikrer og holder CyanFox og dens bidragsytere fra alle juridiske forpliktelser.</string>
     <string name="light_sensor_current_value">Nåværende verdi for lyssensor: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Nivåer for automatisk lysstyrke</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>

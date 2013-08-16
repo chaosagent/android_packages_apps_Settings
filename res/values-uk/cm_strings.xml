@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2013 The CyanFox Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -29,20 +29,20 @@
     <string name="notification_convert_sound_to_vibration_title">Вібрація при сповіщеннях</string>
     <string name="notification_convert_sound_to_vibration_summary">В режимі \"Вібро\" вібрувати при сповіщеннях незалежно від налаштувань програм</string>
     <string name="device_hostname">Ім’я пристрою</string>
-    <string name="mod_version">Версія CyanogenMod</string>
+    <string name="mod_version">Версія CyanFox</string>
     <string name="mod_version_default">Невідомо</string>
     <string name="build_date">Дата збірки</string>
     <string name="cpu_info">Процесор</string>
     <string name="mem_info">Пам’ять</string>
-    <string name="anonymous_statistics_title">Статистика CyanogenMod</string>
+    <string name="anonymous_statistics_title">Статистика CyanFox</string>
     <string name="anonymous_statistics_summary">Допоможіть зробити CM краще, увімкнувши відправку анонімних звітів</string>
     <string name="anonymous_statistics_warning_title">Інформація про використання</string>
-    <string name="anonymous_statistics_warning">Анонімні звіти дозволяють розробникам CyanogenMod відслідковвувати встановлення на різні пристрої. Інформація, що відправляється включає в себе тип пристрою, версію прошивки і унікальний ідентифікатор, відправка якого ніяким способом не шкодить Вашій конфіденційності. Звіт відсилається при кожному завантаженні пристрою.\n\nДля перегляду даних, які відправляються, нитисніть \"Перегляд\".</string>
+    <string name="anonymous_statistics_warning">Анонімні звіти дозволяють розробникам CyanFox відслідковвувати встановлення на різні пристрої. Інформація, що відправляється включає в себе тип пристрою, версію прошивки і унікальний ідентифікатор, відправка якого ніяким способом не шкодить Вашій конфіденційності. Звіт відсилається при кожному завантаженні пристрою.\n\nДля перегляду даних, які відправляються, нитисніть \"Перегляд\".</string>
     <string name="enable_reporting_title">Увімкнути відправку звітів</string>
     <string name="preview_data_title">Перегляд</string>
     <string name="view_stats_title">Статистика</string>
     <string name="anonymous_learn_more">Детальніше</string>
-    <string name="anonymous_notification_desc">Анонімна статистика CyanogenMod</string>
+    <string name="anonymous_notification_desc">Анонімна статистика CyanFox</string>
     <string name="preview_id_title">Унікальний ідентифікатор</string>
     <string name="preview_device_title">Пристрій</string>
     <string name="preview_version_title">Версія</string>
@@ -357,7 +357,7 @@
     <string name="power_menu_airplane_title">Режим польоту</string>
     <string name="power_menu_user_title">Переключенння користувачів</string>
     <string name="power_menu_sound_title">Звукова панель</string>
-    <string name="cmupdate_settings_title">Оновлення CyanogenMod</string>
+    <string name="cmupdate_settings_title">Оновлення CyanFox</string>
     <string name="cmupdate_settings_summary">Перевірка та встановлення доступних оновлень</string>
     <string name="advanced_settings_title">Розширені налаштування</string>
     <string name="ime_switcher_notify">Вибір способу введення</string>
@@ -479,7 +479,7 @@
     <string name="volume_adjust_sounds_enable_title">Звук при регулюванні гучності</string>
     <string name="volume_adjust_sounds_enable_summary">Відтворювати звук при зміні гучності кнопками \"+\" чи \"-\"</string>
     <string name="cyanogenmod_waiver_title">Відмова від відповідальності</string>
-    <string name="cyanogenmod_waiver_body">Зміна цих налаштувань може суперечити законам вашох країни.\n\nНатискаючи \"OK\" Ви погоджуєтесь із цим попередженням та звільняєте CyanogenMod і всіх його розробників від любих юридичних зобов’язань.</string>
+    <string name="cyanogenmod_waiver_body">Зміна цих налаштувань може суперечити законам вашох країни.\n\nНатискаючи \"OK\" Ви погоджуєтесь із цим попередженням та звільняєте CyanFox і всіх його розробників від любих юридичних зобов’язань.</string>
     <string name="light_sensor_current_value">Поточний показ датчика: <xliff:g id="light_level">%d</xliff:g> лк</string>
     <string name="auto_brightness_dialog_title">Рівні автоматичної підсвітки</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> лк</string>

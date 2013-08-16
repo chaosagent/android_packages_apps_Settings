@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2012-13 The CyanogenMod Project
+<!--  Copyright (C) 2012-13 The CyanFox Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -39,20 +39,20 @@
     <string name="notification_convert_sound_to_vibration_title">Vibreer op kennisgewing</string>
     <string name="notification_convert_sound_to_vibration_summary">In vibrasie-modus sal alle kennisgewings, ongeag van individuele program instellings, vibreer</string>
     <string name="device_hostname">Toestel gasheernaam</string>
-    <string name="mod_version">CyanogenMod weergawe</string>
+    <string name="mod_version">CyanFox weergawe</string>
     <string name="mod_version_default">Onbekend</string>
     <string name="build_date">Bou datum</string>
     <string name="cpu_info">SVE</string>
     <string name="mem_info">Geheue</string>
-    <string name="anonymous_statistics_title">CyanogenMod statistieke</string>
-    <string name="anonymous_statistics_summary">Help CyanogenMod verbeter deur anonieme statistiek verslagdoening te keis</string>
+    <string name="anonymous_statistics_title">CyanFox statistieke</string>
+    <string name="anonymous_statistics_summary">Help CyanFox verbeter deur anonieme statistiek verslagdoening te keis</string>
     <string name="anonymous_statistics_warning_title">Inligting</string>
-    <string name="anonymous_statistics_warning">"Deur CyanogenMod statistieke toe te laat sal nie-persoonlike data ingestuur word na die ontwikkelaars van CyanogenMod installasies. Die inligting sluit in \'n unieke identifikasienommer in wat nie privaatheid of persoonlike data in gevaar stel nie. Die data word ingestuur tydens elke \'boot\'.\n\nVir \'n voorbeeld van die data wat ingestuur word, raak "<b>"Voorskou"</b>"</string>
+    <string name="anonymous_statistics_warning">"Deur CyanFox statistieke toe te laat sal nie-persoonlike data ingestuur word na die ontwikkelaars van CyanFox installasies. Die inligting sluit in \'n unieke identifikasienommer in wat nie privaatheid of persoonlike data in gevaar stel nie. Die data word ingestuur tydens elke \'boot\'.\n\nVir \'n voorbeeld van die data wat ingestuur word, raak "<b>"Voorskou"</b>"</string>
     <string name="enable_reporting_title">Aktiveer verslaggewing</string>
     <string name="preview_data_title">Voorskou</string>
     <string name="view_stats_title">Kyk na statistieke</string>
     <string name="anonymous_learn_more">Leer meer</string>
-    <string name="anonymous_notification_desc">Aktiveer of deaktiveer unieke CyanogenMod statistieke</string>
+    <string name="anonymous_notification_desc">Aktiveer of deaktiveer unieke CyanFox statistieke</string>
     <string name="preview_id_title">Unieke ID</string>
     <string name="preview_device_title">Toestel</string>
     <string name="preview_version_title">Weergawe</string>
@@ -382,7 +382,7 @@
     <string name="power_menu_airplane_title">Vliegtuigmodus</string>
     <string name="power_menu_user_title">Gebruiker wisselaar</string>
     <string name="power_menu_sound_title">Klankpaneel</string>
-    <string name="cmupdate_settings_title">CyanogenMod opgradering</string>
+    <string name="cmupdate_settings_title">CyanFox opgradering</string>
     <string name="cmupdate_settings_summary">Soek vir of installeer beskikbare opgraderings</string>
     <string name="advanced_settings_title">Gevorderd</string>
     <string name="ime_switcher_notify">Kies kennisgewings</string>
@@ -502,7 +502,7 @@
     <string name="headset_connect_player_summary">Begin die standaard musiek program wanneer oorfone gekoppel word</string>
     <string name="safe_headset_volume_title">Veilige oorfone volume</string>
     <string name="cyanogenmod_waiver_title">Kwytskelding</string>
-    <string name="cyanogenmod_waiver_body">"Wysiging van hierdie instelling kan teen jou staat of regerings wette wees.\n\nRaak "<b>"OK"</b>" om hierdie waarskuwing en kwytskelding te aanvaar en CyanogenMod en sy bydraers te vrywaar van alle wetlike verpligtinge."</string>
+    <string name="cyanogenmod_waiver_body">"Wysiging van hierdie instelling kan teen jou staat of regerings wette wees.\n\nRaak "<b>"OK"</b>" om hierdie waarskuwing en kwytskelding te aanvaar en CyanFox en sy bydraers te vrywaar van alle wetlike verpligtinge."</string>
     <string name="advanced_reboot_title">Gevorderde herlaai</string>
     <string name="advanced_reboot_summary">Wanneer toestel ontsluit is, maak die \'recovery\' en \'bootloader\' herlaai opsies in die kragkieslys beskikbaar</string>
     <string name="volume_adjust_sounds_enable_title">Volume verandering</string>

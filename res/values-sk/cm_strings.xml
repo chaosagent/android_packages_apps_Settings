@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2013 The CyanFox Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -54,20 +54,20 @@
     <string name="notification_convert_sound_to_vibration_title">Vibrovať pri upozornení</string>
     <string name="notification_convert_sound_to_vibration_summary">V režime vibrácií budú všetky upozornenia vibrovať bez ohľadu na individuálne nastavenia aplikácií</string>
     <string name="device_hostname">Názov hostiteľa pre zariadenie</string>
-    <string name="mod_version">Verzia CyanogenMod-u</string>
+    <string name="mod_version">Verzia CyanFox-u</string>
     <string name="mod_version_default">Neznáma</string>
     <string name="build_date">Dátum zostavy</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Pamäť</string>
-    <string name="anonymous_statistics_title">Štatistika CyanogenMod-u</string>
-    <string name="anonymous_statistics_summary">Pomôžte tvoriť lepší CyanogenMod zvolením anonymných štatistických hlásení</string>
+    <string name="anonymous_statistics_title">Štatistika CyanFox-u</string>
+    <string name="anonymous_statistics_summary">Pomôžte tvoriť lepší CyanFox zvolením anonymných štatistických hlásení</string>
     <string name="anonymous_statistics_warning_title">O štatistike</string>
-    <string name="anonymous_statistics_warning">Zvolením štatistík CyanogenMod-u bude povolené odosielanie neosobných údajov vývojárom CyanogenMod-u, aby mohli stopovať jednotlivé inštalácie naprieč zariadeniami. Odoslané informácie obsahujú unikátny identifikátor, ktorý neohrozuje vaše súkromné alebo osobné údaje. Údaje sú odoslané pri každom spustení.\n\nNa ukážku odosielaných údajov ťuknite na Prehľad údajov.</string>
+    <string name="anonymous_statistics_warning">Zvolením štatistík CyanFox-u bude povolené odosielanie neosobných údajov vývojárom CyanFox-u, aby mohli stopovať jednotlivé inštalácie naprieč zariadeniami. Odoslané informácie obsahujú unikátny identifikátor, ktorý neohrozuje vaše súkromné alebo osobné údaje. Údaje sú odoslané pri každom spustení.\n\nNa ukážku odosielaných údajov ťuknite na Prehľad údajov.</string>
     <string name="enable_reporting_title">Povoliť hlásenie</string>
     <string name="preview_data_title">Prehľad údajov</string>
     <string name="view_stats_title">Zobraziť štatistiky</string>
     <string name="anonymous_learn_more">Zistiť viac</string>
-    <string name="anonymous_notification_desc">Povolenie alebo zakázanie štatistík CyanogenMod-u</string>
+    <string name="anonymous_notification_desc">Povolenie alebo zakázanie štatistík CyanFox-u</string>
     <string name="preview_id_title">Unikátny ID</string>
     <string name="preview_device_title">Zariadenie</string>
     <string name="preview_version_title">Verzia</string>

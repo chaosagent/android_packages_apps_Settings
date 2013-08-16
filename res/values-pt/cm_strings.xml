@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2013 The CyanFox Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -39,22 +39,22 @@
     <string name="start_time_title">Início</string>
     <string name="end_time_title">Fim</string>
     <string name="device_hostname">Nome do dispositivo</string>
-    <string name="mod_version">Versão CyanogenMod</string>
+    <string name="mod_version">Versão CyanFox</string>
     <string name="mod_version_default">Desconhecida</string>
     <string name="build_date">Data de compilação</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memória</string>
-    <string name="anonymous_statistics_title">Estatísticas CyanogenMod</string>
-    <string name="anonymous_statistics_summary">Ajude a melhorar o CyanogenMod optando por enviar estatísticas anonimas</string>
+    <string name="anonymous_statistics_title">Estatísticas CyanFox</string>
+    <string name="anonymous_statistics_summary">Ajude a melhorar o CyanFox optando por enviar estatísticas anonimas</string>
     <string name="anonymous_statistics_warning_title">Sobre</string>
-    <string name="anonymous_statistics_warning">Optar por enviar estatísticas anonimas do CyanogenMod permitirá que dados não-pessoais sejam enviados para os
-        desenvolvedores do CyanogenMod para rastrear instalações únicas em dispositivos. As informações enviadas incluem um identificador unico,
+    <string name="anonymous_statistics_warning">Optar por enviar estatísticas anonimas do CyanFox permitirá que dados não-pessoais sejam enviados para os
+        desenvolvedores do CyanFox para rastrear instalações únicas em dispositivos. As informações enviadas incluem um identificador unico,
         que não compromete sua privacidade ou dados pessoais. Os dados são enviados durante cada inicialização.\n\nPara um exemplo de dados que são enviados, toque em Pré-visualizar Dados.</string>
     <string name="enable_reporting_title">Habilitar relatório</string>
     <string name="preview_data_title">Pré-visualizar dados</string>
     <string name="view_stats_title">Ver estatísticas</string>
     <string name="anonymous_learn_more">Saiba mais</string>
-    <string name="anonymous_notification_desc">Habilitar ou desabilitar estatísticas CyanogenMod</string>
+    <string name="anonymous_notification_desc">Habilitar ou desabilitar estatísticas CyanFox</string>
     <string name="preview_id_title">ID unico</string>
     <string name="preview_device_title">Dispositivo</string>
     <string name="preview_version_title">Versão</string>
@@ -359,7 +359,7 @@
     <string name="power_menu_expanded_desktop">Área de trabalho expandida</string>
     <string name="power_menu_profiles_title">Alternador de perfil</string>
     <string name="power_menu_airplane_title">Modo avião</string>
-    <string name="cmupdate_settings_title">Atualizações CyanogenMod</string>
+    <string name="cmupdate_settings_title">Atualizações CyanFox</string>
     <string name="cmupdate_settings_summary">Verificar, visualizar ou instalar atualizações disponíveis</string>
     <string name="advanced_settings_title">Avançado</string>
     <string name="ime_switcher_notify">Notificação do método de entrada</string>
@@ -501,7 +501,7 @@
     <string name="notification_convert_sound_to_vibration_title">Vibrar em todas notificações</string>
     <string name="notification_convert_sound_to_vibration_summary">Em modo de vibração, todas as notificações irão vibrar independente das configurações individuais dos aplicativos</string>
     <string name="cyanogenmod_waiver_title">Garantia</string>
-    <string name="cyanogenmod_waiver_body">Alterar esta configuração pode ser contra as leis do seu local.\n\nAo selecionar abaixo \'OK\', você reconhece este aviso e garantia, proteção e isenção ao CyanogenMod e seus contribuintes de todas responsabilidades legais.</string>
+    <string name="cyanogenmod_waiver_body">Alterar esta configuração pode ser contra as leis do seu local.\n\nAo selecionar abaixo \'OK\', você reconhece este aviso e garantia, proteção e isenção ao CyanFox e seus contribuintes de todas responsabilidades legais.</string>
     <string name="expanded_desktop_disabled">Desligado</string>
     <string name="expanded_desktop_status_bar">Barra de status visível</string>
     <string name="expanded_desktop_no_status_bar">Barra de status oculta</string>
