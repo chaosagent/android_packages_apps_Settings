@@ -4534,7 +4534,6 @@
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
 
-<<<<<<< HEAD
     <!-- Recents Ram Bar -->
     <string name="ram_bar">Recents RAM bar</string>
     <string name="ram_bar_note_title">Note</string>
@@ -4553,7 +4552,7 @@
     <string name="ram_bar_color_disabled">Disabled</string>
     <string name="ram_bar_button_help">Help</string>
     <string name="ram_bar_button_reset">Reset colors</string> 
-=======
+    
     <!-- ListView animation -->
     <string name="listview_animation_title">ListView Animation</string>
     <string name="listview_off">Off</string>
@@ -4577,5 +4576,4 @@
     <string name="listview_overshoot_interpolator">overshoot_interpolator</string>
     <string name="listview_anticipate_overshoot_interpolator">anticipate_overshoot_interpolator</string>
     <string name="listview_bounce_interpolator">bounce_interpolator</string>
->>>>>>> fdfc950... ListView Animations (1/2)
 </resources>

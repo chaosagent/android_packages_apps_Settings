@@ -916,7 +916,7 @@
         <!-- Always allow app to send to premium SMS short code. -->
         <item>Always allow</item>
     </string-array>
-<<<<<<< HEAD
+
     
     <!-- Recents RAM bar-->
     <string-array name="entries_ram_bar_mode">
@@ -927,7 +927,11 @@
     </string-array>
 
     <string-array name="values_ram_bar_mode" translatable="false">
-=======
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 
     <!-- Listview animation -->
     <string-array name="listview_animation_entries">
@@ -971,17 +975,13 @@
     </string-array>
 
     <string-array name="listview_interpolator_values">
->>>>>>> fdfc950... ListView Animations (1/2)
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
-<<<<<<< HEAD
-=======
         <item>4</item>
         <item>5</item>
         <item>6</item>
         <item>7</item>
->>>>>>> fdfc950... ListView Animations (1/2)
     </string-array>
 </resources>
