@@ -569,14 +569,10 @@
     <string name="headset_connect_player_summary">Alapértelmezett zenelejátszó elindítása fülhallgató csatlakoztatásakor</string>
     <string name="safe_headset_volume_title">Biztonságos hangerő</string>
     <string name="cyanogenmod_waiver_title">Jogi felelősség átvállalása</string>
-<<<<<<< HEAD
     <string name="cyanogenmod_waiver_body">A beállítás módosítása halláskárosodáshoz vezethet.\n\nAz \"OK\" gombbal Ön elfogadja ezt a figyelmeztetést és ezzel felmenti a CyanFox csapatot és minden közreműködőt az esetleges jogi kötelezettségek alól.</string>
-=======
-    <string name="cyanogenmod_waiver_body">A beállítás módosítása halláskárosodáshoz vezethet.\n\nAz \"OK\" gombbal Ön elfogadja ezt a figyelmeztetést és ezzel felmenti a CyanogenMod csapatot és minden közreműködőt az esetleges jogi kötelezettségek alól.</string>
     <string name="auto_brightness_setup_title">Automatikus fényerő</string>
     <string name="auto_brightness_adjustment_title">Fényerő beállítások</string>
     <string name="auto_brightness_twilight_adjustment">Napkelte és napnyugta használata</string>
->>>>>>> 30ce864b013398727d1aeaf3231bea2e2474a953
     <string name="light_sensor_current_value">Fényérzékelő jelenlegi értéke: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Automatikus fényerő</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g>lux</string>
