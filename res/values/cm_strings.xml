@@ -1018,4 +1018,62 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="sensors_motors_title">Sensors &amp; motors</string>
     <string name="display_calibration_title">Display calibration</string>
 
+    <!-- Dual Pane -->
+    <string name="dual_pane">Tablet dual panel mode</string>
+    <string name="dual_pane_summary">Restart settings to take effect</string>
+
+    <!-- Interface titles -->
+    <string name="general_ui">General UI</string>
+    <string name="improved_ui">Improved UI</string>
+    <string name="advanced_ui">Advanced UI</string>
+
+    <!-- Recents Ram Bar -->
+    <string name="ram_bar">Recent apps RAM Bar</string>
+    <string name="ram_bar_mode_title">Recent apps RAM bar Mode</string>
+    <string name="ram_bar_mode_dialog_title">Show on Recent apps RAM bar</string>
+    <string name="ram_bar_none">None</string>
+    <string name="ram_bar_apps">Applications</string>
+    <string name="ram_bar_cache">Applications and Cache</string>
+    <string name="ram_bar_other">Applications, Cache and Other</string>
+    <string name="ram_bar_style_cat">Recents RAM bar style</string>
+    <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
+    <string name="ram_bar_color_total_mem_color">Other RAM color</string>
+    <string name="ram_bar_color_enabled">Enabled</string>
+    <string name="ram_bar_color_disabled">Disabled</string>
+    <string name="ram_bar_button_reset">Reset colors</string> 
+    
+    <!-- ListView animation -->
+    <string name="listview_animation_title">List view animation</string>
+    <string name="listview_off">Off</string>
+    <string name="listview_wave_left">Wave Left</string>
+    <string name="listview_wave_right">Wave Right</string>
+    <string name="listview_alpha">Alpha</string>
+    <string name="listview_scale">Scale</string>
+    <string name="listview_stack_top">Stack Top</string>
+    <string name="listview_stack_bottom">Stack Bottom</string>
+    <string name="listview_unfold">Unfold</string>
+    <string name="listview_fold">Fold</string>
+    <string name="listview_translate_left">Translate Left</string>
+    <string name="listview_translate_right">Translate Right</string>
+
+    <!-- ListView interpolator -->
+    <string name="listview_interpolator_title">List view interpolator</string>
+    <string name="listview_accelerate_interpolator">Accelerate</string>
+    <string name="listview_decelerate_interpolator">Decelerate</string>
+    <string name="listview_accelerate_decelerate_interpolator">Accelerate / Decelerate</string>
+    <string name="listview_anticipate_interpolator">Anticipate</string>
+    <string name="listview_overshoot_interpolator">Overshoot</string>
+    <string name="listview_anticipate_overshoot_interpolator">Anticipate Overshoot</string>
+    <string name="listview_bounce_interpolator">Bounce</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">?</string>
+    <string name="arrow_down">?</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="hex">Hex:</string>
 </resources>
