@@ -34,6 +34,11 @@
         android:fragment="com.android.settings.cyanogenmod.NotificationDrawer"
         android:title="@string/notification_drawer_title" />
 
+    <CheckBoxPreference
+        android:key="dual_pane"
+        android:title="@string/dual_pane"
+        android:summary="@string/dual_pane_summary" />
+
     <PreferenceScreen
         android:key="recents_ram_bar"
         android:fragment="com.android.settings.cyanogenmod.RamBar"
