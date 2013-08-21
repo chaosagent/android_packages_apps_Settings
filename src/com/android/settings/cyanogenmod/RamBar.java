@@ -84,6 +84,7 @@ public class RamBar extends SettingsPreferenceFragment implements OnPreferenceCh
                     Settings.System.RECENTS_RAM_BAR_ACTIVE_APPS_COLOR, DEFAULT_ACTIVE_APPS_COLOR);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mRamBarAppMemColor.setSummary(hexColor);
+        mRamBarAppMemColor.setNewPreviewColor(intColor);
 
         mRamBarCacheMemColor = (ColorPickerPreference) findPreference(RAM_BAR_COLOR_CACHE_MEM);
         mRamBarCacheMemColor.setOnPreferenceChangeListener(this);
@@ -91,6 +92,7 @@ public class RamBar extends SettingsPreferenceFragment implements OnPreferenceCh
                     Settings.System.RECENTS_RAM_BAR_CACHE_COLOR, DEFAULT_CACHE_COLOR);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mRamBarCacheMemColor.setSummary(hexColor);
+        mRamBarAppMemColor.setNewPreviewColor(intColor);
 
         mRamBarTotalMemColor = (ColorPickerPreference) findPreference(RAM_BAR_COLOR_TOTAL_MEM);
         mRamBarTotalMemColor.setOnPreferenceChangeListener(this);
@@ -98,6 +100,7 @@ public class RamBar extends SettingsPreferenceFragment implements OnPreferenceCh
                     Settings.System.RECENTS_RAM_BAR_MEM_COLOR, DEFAULT_MEM_COLOR);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mRamBarTotalMemColor.setSummary(hexColor);
+        mRamBarAppMemColor.setNewPreviewColor(intColor);
 
         updateRamBarOptions();
         setHasOptionsMenu(true);
@@ -116,7 +119,7 @@ public class RamBar extends SettingsPreferenceFragment implements OnPreferenceCh
             case R.id.help:
                 final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(EXPLANATION_URL));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                mContext.startActivity(intent);
+                getActivity().startActivity(intent);
                 return true;
             case R.id.reset:
                 ramBarColorReset();

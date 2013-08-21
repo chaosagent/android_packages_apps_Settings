@@ -23,6 +23,7 @@ import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.util.Log;
@@ -30,6 +31,8 @@ import android.view.WindowManagerGlobal;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.cyanogenmod.RamBar;
+import com.android.settings.Utils;
 
 public class SystemUiSettings extends SettingsPreferenceFragment  implements
         Preference.OnPreferenceChangeListener {
@@ -39,10 +42,19 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "expanded_desktop_no_navbar";
     private static final String CATEGORY_NAVBAR = "navigation_bar";
     private static final String KEY_PIE_CONTROL = "pie_control";
+    private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
+    private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
+    private static final String KEY_DUAL_PANE = "dual_pane"; 
+    private static final String KEY_GENERAL_OPTIONS = "general_settings_options_prefs";
+    private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
 
     private PreferenceScreen mPieControl;
     private ListPreference mExpandedDesktopPref;
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
+    private ListPreference mListViewAnimation;
+    private ListPreference mListViewInterpolator;
+    private CheckBoxPreference mDualPane;
+    private Preference mRamBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +64,34 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         PreferenceScreen prefScreen = getPreferenceScreen();
 
         mPieControl = (PreferenceScreen) findPreference(KEY_PIE_CONTROL);
+        
+        //ListView Animations
+        mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
+        int listviewanimation = Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.LISTVIEW_ANIMATION, 1);
+        mListViewAnimation.setValue(String.valueOf(listviewanimation));
+        mListViewAnimation.setSummary(mListViewAnimation.getEntry());
+        mListViewAnimation.setOnPreferenceChangeListener(this);
+
+        mListViewInterpolator = (ListPreference) findPreference(KEY_LISTVIEW_INTERPOLATOR);
+        int listviewinterpolator = Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.LISTVIEW_INTERPOLATOR, 0);
+        mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
+        mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
+        mListViewInterpolator.setOnPreferenceChangeListener(this);
+ 
+        //RamBar
+        mRamBar = findPreference(KEY_RECENTS_RAM_BAR);
+        mRamBar.setOnPreferenceChangeListener(this);
+        updateRamBar();
+
+        //Dual Pane Settings
+        mDualPane = (CheckBoxPreference) findPreference(KEY_DUAL_PANE);
+        boolean preferDualPane = getResources().getBoolean(
+                com.android.internal.R.bool.preferences_prefer_dual_pane);
+        boolean dualPaneMode = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.DUAL_PANE_PREFS, (preferDualPane ? 1 : 0)) == 1;
+        mDualPane.setChecked(dualPaneMode);
 
         // Expanded desktop
         mExpandedDesktopPref = (ListPreference) findPreference(KEY_EXPANDED_DESKTOP);
@@ -86,14 +126,46 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         }
     }
 
+    private void updateRamBar() {
+        int ramBarMode = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.RECENTS_RAM_BAR_MODE, 0);
+        if (ramBarMode != 0)
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_enabled));
+        else
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_disabled));
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         updatePieControlSummary();
+        updateRamBar();
+    }
+
+        @Override
+    public void onPause() {
+        super.onResume();
+        updateRamBar();
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mExpandedDesktopPref) {
+        if (preference == mListViewAnimation) {
+            int listviewanimation = Integer.valueOf((String) objValue);
+            int index = mListViewAnimation.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LISTVIEW_ANIMATION,
+                    listviewanimation);
+            mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
+            return true;
+        } else if (preference == mListViewInterpolator) {
+            int listviewinterpolator = Integer.valueOf((String) objValue);
+            int index = mListViewInterpolator.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LISTVIEW_INTERPOLATOR,
+                    listviewinterpolator);
+            mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
+            return true;
+        } else if (preference == mExpandedDesktopPref) {
             int expandedDesktopValue = Integer.valueOf((String) objValue);
             updateExpandedDesktop(expandedDesktopValue);
             return true;
@@ -102,7 +174,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
             updateExpandedDesktop(value ? 2 : 0);
             return true;
         }
-
         return false;
     }
 
@@ -117,6 +188,18 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
                 mPieControl.setSummary(R.string.pie_control_disabled);
             }
         }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+            Preference preference) {
+        if (preference == mDualPane) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.DUAL_PANE_PREFS,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     private void updateExpandedDesktop(int value) {
