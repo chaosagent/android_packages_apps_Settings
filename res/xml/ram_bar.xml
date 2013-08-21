@@ -18,12 +18,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/ram_bar">
 
-    <Preference
-        style="?android:preferenceInformationStyle"
-        android:title="@string/ram_bar_note_title"
-        android:summary="@string/ram_bar_note_summary"
-        android:selectable="false" />
-
     <PreferenceCategory
         android:key="ram_bar_mode_cat"
         android:title="@string/ram_bar_mode_title">
