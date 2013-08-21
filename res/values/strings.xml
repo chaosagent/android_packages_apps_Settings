@@ -4536,26 +4536,31 @@
 
     <!-- Dual Pane -->
     <string name="dual_pane">Tablet dual panel mode</string>
-    <string name="dual_pane_summary">Restart settings to take effect</string> 
+    <string name="dual_pane_summary">Restart settings to take effect</string>
+    
+    <!-- Interface titles -->
+    <string name="general_ui">General UI</string>
+    <string name="improved_ui">Improved UI</string>
+    <string name="advanced_ui">Advanced UI</string>
 
     <!-- Recents Ram Bar -->
-    <string name="ram_bar">Recents RAM Bar</string>
-    <string name="ram_bar_mode_title">Recents RAM Bar Mode</string>
-    <string name="ram_bar_mode_dialog_title">Show on Recents RAM Bar</string>
+    <string name="ram_bar">Recent apps RAM Bar</string>
+    <string name="ram_bar_mode_title">Recent apps RAM bar Mode</string>
+    <string name="ram_bar_mode_dialog_title">Show on Recent apps RAM bar</string>
     <string name="ram_bar_none">None</string>
     <string name="ram_bar_apps">Applications</string>
     <string name="ram_bar_cache">Applications and Cache</string>
     <string name="ram_bar_other">Applications, Cache and Other</string>
-    <string name="ram_bar_style_cat">Recents RAM Bar Style</string>
-    <string name="ram_bar_color_app_mem_color">Applications RAM Color</string>
-    <string name="ram_bar_color_cache_mem_color">Cache RAM Color</string>
-    <string name="ram_bar_color_total_mem_color">Other RAM Color</string>
+    <string name="ram_bar_style_cat">Recents RAM bar style</string>
+    <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
+    <string name="ram_bar_color_total_mem_color">Other RAM color</string>
     <string name="ram_bar_color_enabled">Enabled</string>
     <string name="ram_bar_color_disabled">Disabled</string>
-    <string name="ram_bar_button_reset">Reset Colors</string> 
+    <string name="ram_bar_button_reset">Reset colors</string> 
     
     <!-- ListView animation -->
-    <string name="listview_animation_title">ListView Animation</string>
+    <string name="listview_animation_title">List view animation</string>
     <string name="listview_off">Off</string>
     <string name="listview_wave_left">Wave Left</string>
     <string name="listview_wave_right">Wave Right</string>
@@ -4569,7 +4574,7 @@
     <string name="listview_translate_right">Translate Right</string>
 
     <!-- ListView interpolator -->
-    <string name="listview_interpolator_title">ListView Interpolator</string>
+    <string name="listview_interpolator_title">List view interpolator</string>
     <string name="listview_accelerate_interpolator">Accelerate</string>
     <string name="listview_decelerate_interpolator">Decelerate</string>
     <string name="listview_accelerate_decelerate_interpolator">Accelerate / Decelerate</string>
