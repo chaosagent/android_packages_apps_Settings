@@ -608,19 +608,19 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
 
     private void updateRootAccessOptions() {
-        String value = SystemProperties.get(ROOT_ACCESS_PROPERTY, "1");
+        String value = SystemProperties.get(ROOT_ACCESS_PROPERTY, "3");
         mRootAccess.setValue(value);
         mRootAccess.setSummary(getResources()
                 .getStringArray(R.array.root_access_entries)[Integer.valueOf(value)]);
     }
 
     /* package */ static boolean isRootForAppsEnabled() {
-        int value = SystemProperties.getInt(ROOT_ACCESS_PROPERTY, 1);
+        int value = SystemProperties.getInt(ROOT_ACCESS_PROPERTY, 3);
         return value == 1 || value == 3;
     }
 
     private void writeRootAccessOptions(Object newValue) {
-        String oldValue = SystemProperties.get(ROOT_ACCESS_PROPERTY, "1");
+        String oldValue = SystemProperties.get(ROOT_ACCESS_PROPERTY, "3");
         SystemProperties.set(ROOT_ACCESS_PROPERTY, newValue.toString());
         if (Integer.valueOf(newValue.toString()) < 2 && !oldValue.equals(newValue)
                 && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
@@ -634,8 +634,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
 
     private void resetRootAccessOptions() {
-        String oldValue = SystemProperties.get(ROOT_ACCESS_PROPERTY, "1");
-        SystemProperties.set(ROOT_ACCESS_PROPERTY, "1");
+        String oldValue = SystemProperties.get(ROOT_ACCESS_PROPERTY, "3");
+        SystemProperties.set(ROOT_ACCESS_PROPERTY, "3");
         if (!oldValue.equals("1") && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
             SystemProperties.set("service.adb.root", "0");
             Settings.Secure.putInt(getActivity().getContentResolver(),
@@ -1383,7 +1383,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeAppProcessLimitOptions(newValue);
             return true;
         } else if (preference == mRootAccess) {
-            if ("0".equals(SystemProperties.get(ROOT_ACCESS_PROPERTY, "1"))
+            if ("0".equals(SystemProperties.get(ROOT_ACCESS_PROPERTY, "3"))
                     && !"0".equals(newValue)) {
                 mSelectedRootValue = newValue;
                 mDialogClicked = false;
