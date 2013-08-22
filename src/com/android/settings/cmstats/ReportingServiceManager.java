@@ -28,9 +28,7 @@ import android.net.NetworkInfo;
 import android.util.Log;
 
 public class ReportingServiceManager extends BroadcastReceiver {
-    private static final long MILLIS_PER_HOUR = 60L * 60L * 1000L;
-    private static final long MILLIS_PER_DAY = 24L * MILLIS_PER_HOUR;
-    private static final long UPDATE_INTERVAL = 1L * MILLIS_PER_DAY;
+    private static final long UPDATE_INTERVAL = 60L * 60L * 1000L;
 
     @Override
     public void onReceive(Context context, Intent intent) {
