@@ -128,7 +128,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
 
     private void updateRamBar() {
         int ramBarMode = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.RECENTS_RAM_BAR_MODE, 3);
+                Settings.System.RECENTS_RAM_BAR_MODE, 0);
         if (ramBarMode != 0)
             mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_enabled));
         else
