@@ -49,9 +49,9 @@ public class RamBar extends SettingsPreferenceFragment implements OnPreferenceCh
     private static final String RAM_BAR_COLOR_CACHE_MEM = "ram_bar_color_cache_mem";
     private static final String RAM_BAR_COLOR_TOTAL_MEM = "ram_bar_color_total_mem";
 
-    static final int DEFAULT_MEM_COLOR = 0xff8d8d8d;
-    static final int DEFAULT_CACHE_COLOR = 0xff00aa00;
-    static final int DEFAULT_ACTIVE_APPS_COLOR = 0xff33b5e5;
+    static final int DEFAULT_MEM_COLOR = 0xff33b5e5;
+    static final int DEFAULT_CACHE_COLOR = 0xff6ac2e2;
+    static final int DEFAULT_ACTIVE_APPS_COLOR = 0xffb0d8e6;
 
     private ListPreference mRamBarMode;
     private ColorPickerPreference mRamBarAppMemColor;
