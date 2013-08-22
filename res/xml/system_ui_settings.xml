@@ -60,23 +60,17 @@
             android:title="@string/dual_pane"
             android:summary="@string/dual_pane_summary" />
 
-        <PreferenceScreen
-            android:key="container"
-            android:title="@string/power_menu_expanded_desktop">
+        <CheckBoxPreference
+            android:key="expanded_desktop_no_navbar"
+            android:title="@string/power_menu_expanded_desktop"
+            android:persistent="false" />
 
-            <CheckBoxPreference
-                android:key="expanded_desktop_no_navbar"
-                android:title="@string/power_menu_expanded_desktop"
-                android:persistent="false" />
-
-            <ListPreference
-                android:key="expanded_desktop"
-                android:title="@string/power_menu_expanded_desktop"
-                android:entries="@array/expanded_desktop_entries"
-                android:entryValues="@array/expanded_desktop_values"
-                android:persistent="false" />
-
-        </PreferenceScreen>
+        <ListPreference
+            android:key="expanded_desktop"
+            android:title="@string/power_menu_expanded_desktop"
+            android:entries="@array/expanded_desktop_entries"
+            android:entryValues="@array/expanded_desktop_values"
+            android:persistent="false" />
 
         <PreferenceScreen
             android:key="container"
