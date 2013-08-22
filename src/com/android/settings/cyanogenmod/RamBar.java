@@ -71,7 +71,7 @@ public class RamBar extends SettingsPreferenceFragment implements OnPreferenceCh
 
         mRamBarMode = (ListPreference) prefSet.findPreference(RAM_BAR_MODE);
         int ramBarMode = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.RECENTS_RAM_BAR_MODE, 0);
+                Settings.System.RECENTS_RAM_BAR_MODE, 3);
         mRamBarMode.setValue(String.valueOf(ramBarMode));
         mRamBarMode.setSummary(mRamBarMode.getEntry());
         mRamBarMode.setOnPreferenceChangeListener(this);
@@ -191,7 +191,7 @@ public class RamBar extends SettingsPreferenceFragment implements OnPreferenceCh
 
     private void updateRamBarOptions() {
         int ramBarMode = Settings.System.getInt(getActivity().getContentResolver(),
-               Settings.System.RECENTS_RAM_BAR_MODE, 0);
+               Settings.System.RECENTS_RAM_BAR_MODE, 3);
         if (ramBarMode == 0) {
             mRamBarAppMemColor.setEnabled(false);
             mRamBarCacheMemColor.setEnabled(false);
