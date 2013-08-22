@@ -109,11 +109,11 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
                 mExpandedDesktopPref.setOnPreferenceChangeListener(this);
                 mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
                 updateExpandedDesktop(expandedDesktopValue);
-                prefScreen.removePreference(mExpandedDesktopNoNavbarPref);
+                prefScreen().removePreference(findPreference(KEY_EXPANDED_DESKTOP_NO_NAVBAR));
             } else {
                 mExpandedDesktopNoNavbarPref.setOnPreferenceChangeListener(this);
                 mExpandedDesktopNoNavbarPref.setChecked(expandedDesktopValue > 0);
-                prefScreen.removePreference(mExpandedDesktopPref);
+                prefScreen().removePreference(findPreference(KEY_EXPANDED_DESKTOP));
             }
 
             // Hide navigation bar category on devices without navigation bar
