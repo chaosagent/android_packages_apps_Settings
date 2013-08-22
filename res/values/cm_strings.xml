@@ -1044,6 +1044,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ram_bar_button_reset">Reset colors</string> 
     
     <!-- ListView animation -->
+    <string name="listview_animation_effects">List view effects</string>
     <string name="listview_animation_title">List view animation</string>
     <string name="listview_off">Off</string>
     <string name="listview_wave_left">Wave Left</string>

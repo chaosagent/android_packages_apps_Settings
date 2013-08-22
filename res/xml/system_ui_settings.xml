@@ -93,21 +93,27 @@
             android:title="@string/dual_pane"
             android:summary="@string/dual_pane_summary" />
 
-        <ListPreference
-            android:key="listview_animation"
-            android:dialogTitle="@string/listview_animation_title"
-            android:title="@string/listview_animation_title"
-            android:entries="@array/listview_animation_entries"
-            android:entryValues="@array/listview_animation_values"
-            android:defaultValue="4" />
+        <PreferenceScreen
+            android:key="container"
+            android:title="@string/listview_animation_effects">
 
-        <ListPreference
-            android:key="listview_interpolator"
-            android:dialogTitle="@string/listview_interpolator_title"
-            android:title="@string/listview_interpolator_title"
-            android:entries="@array/listview_interpolator_entries"
-            android:entryValues="@array/listview_interpolator_values"
-            android:defaultValue="5" />
+            <ListPreference
+                android:key="listview_animation"
+                android:dialogTitle="@string/listview_animation_title"
+                android:title="@string/listview_animation_title"
+                android:entries="@array/listview_animation_entries"
+                android:entryValues="@array/listview_animation_values"
+                android:defaultValue="4" />
+
+            <ListPreference
+                android:key="listview_interpolator"
+                android:dialogTitle="@string/listview_interpolator_title"
+                android:title="@string/listview_interpolator_title"
+                android:entries="@array/listview_interpolator_entries"
+                android:entryValues="@array/listview_interpolator_values"
+                android:defaultValue="5" />
+
+        </PreferenceScreen>
 
     </PreferenceCategory>
 
