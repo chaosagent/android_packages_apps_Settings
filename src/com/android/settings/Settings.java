@@ -432,7 +432,7 @@ public class Settings extends PreferenceActivity
     }
 
     private void updateHeaderList(List<Header> target) {
-        final boolean showDev = (UserHandle.myUserId() == UserHandle.USER_OWNER);
+        final boolean showDev = true;
         int i = 0;
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);

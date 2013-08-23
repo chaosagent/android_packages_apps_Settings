@@ -108,7 +108,7 @@ public class ReportingService extends Service {
             boolean success = false;
 
             try {
-                List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
+                List<NameValuePair> kv = new ArrayList<NameValuePair>();
                 kv.add(new BasicNameValuePair("device_hash", deviceId));
                 kv.add(new BasicNameValuePair("device_name", deviceName));
                 kv.add(new BasicNameValuePair("device_version", deviceVersion));
@@ -139,8 +139,8 @@ public class ReportingService extends Service {
                 // use set interval
                 interval = 0;
             } else {
-                // error, try again in 3 hours
-                interval = 3L * 60L * 60L * 1000L;
+                // error, try again in 2 hours
+                interval = 2L * 60L * 60L * 1000L;
             }
 
             ReportingServiceManager.setAlarm(context, interval);
