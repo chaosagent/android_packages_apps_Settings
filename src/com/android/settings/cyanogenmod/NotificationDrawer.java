@@ -128,6 +128,18 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         return false;
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+            Preference preference) {
+    if (preference == mShowWifiName) {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.NOTIFICATION_SHOW_WIFI_SSID,
+                mShowWifiName.isChecked() ? 1 : 0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+
     public static class PowerWidgetChooser extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
@@ -333,17 +345,6 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
             }
         }
 
-        @Override
-        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-                Preference preference) {
-        if (preference == mShowWifiName) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.NOTIFICATION_SHOW_WIFI_SSID,
-                    mShowWifiName.isChecked() ? 1 : 0);
-                return true;
-            }
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
-        } 
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getContentResolver();
