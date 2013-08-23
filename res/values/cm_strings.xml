@@ -1079,7 +1079,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="set">Set</string>
     <string name="hex">Hex:</string>
 
-    <!-- WiFi Statusbar -->
-
-  
+    <!-- Alternate default app picker -->
+    <string name="display_short">Display</string>
+    <string name="misc_short">Misc</string>
+    <string name="alt_resolver">Use Alt Default App Grid</string>
+    <string name="alt_resolver_summary">Use Alternate Default App Picker</string>
 </resources>
