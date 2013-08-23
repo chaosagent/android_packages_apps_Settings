@@ -39,6 +39,7 @@ import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -68,7 +69,7 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
     private ListPreference mCollapseOnDismiss;
     private ListPreference mPowerWidgetHapticFeedback;
     
-    CheckBoxPreference mShowWifiName;
+    private CheckBoxPreference mShowWifiName;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -90,7 +91,6 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         mShowWifiName = (CheckBoxPreference) findPreference(PREF_NOTIFICATION_SHOW_WIFI_SSID);
         mShowWifiName.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NOTIFICATION_SHOW_WIFI_SSID, 0) == 1);
-        mShowWifiName.setOnPreferenceChangeListener(this);
 
         mPowerWidgetHapticFeedback = (ListPreference)
                 prefSet.findPreference(UI_EXP_WIDGET_HAPTIC_FEEDBACK);
@@ -334,15 +334,16 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         }
 
         @Override
-        public boolean onPreferenceChange(Preference preference, Object newValue) {
-            if (preference == mShowWifiName) {
-                Settings.System.putInt(getActivity().getContentResolver(),
-                        Settings.System.NOTIFICATION_SHOW_WIFI_SSID,
-                        (Boolean) newValue ? 1 : 0);
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+                Preference preference) {
+        if (preference == mShowWifiName) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NOTIFICATION_SHOW_WIFI_SSID,
+                    mShowWifiName.isChecked() ? 1 : 0);
                 return true;
             }
-            return false;
-        }
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        } 
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getContentResolver();
