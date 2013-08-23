@@ -155,10 +155,11 @@
     <string name="collapse_on_dismiss_never_summary">Leave open after removing notifications</string>
     <string name="collapse_on_dismiss_if_empty_summary">Close after removing the last notification</string>
     <string name="collapse_on_dismiss_if_no_clearable_summary">Close after removing the last removable notification</string>
-
-    <string name="lock_screen_title">Lock screen</string>
+    <string name="notification_show_wifi_ssid_title">Show Wifi network name</string>
+    <string name="notification_show_wifi_ssid_summary">Display the name of the currently connected Wifi network</string>
 
     <!-- Lock Screen Shortcuts -->
+    <string name="lock_screen_title">Lock screen</string>
     <string name="lockscreen_target_info">Drag the slider to targets to assign shortcuts</string>
     <string name="lockscreen_target_title">Slider shortcuts</string>
     <string name="lockscreen_target_summary">View or change custom lock screen shortcuts</string>
@@ -1077,4 +1078,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="hex">Hex:</string>
+
+    <!-- WiFi Statusbar -->
+
+  
 </resources>

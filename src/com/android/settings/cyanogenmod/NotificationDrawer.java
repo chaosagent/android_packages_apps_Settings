@@ -39,6 +39,7 @@ import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -51,8 +52,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.internal.telephony.Phone;
-import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.R;
+import com.android.settings.Utils;
 
 import static com.android.internal.util.cm.QSUtils.deviceSupportsMobileData;
 
@@ -62,14 +64,17 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
     private static final String SEPARATOR = "OV=I=XseparatorX=I=VO";
     private static final String UI_COLLAPSE_BEHAVIOUR = "notification_drawer_collapse_on_dismiss";
     private static final String UI_EXP_WIDGET_HAPTIC_FEEDBACK = "expanded_haptic_feedback";
+    private static final String PREF_NOTIFICATION_SHOW_WIFI_SSID = "notification_show_wifi_ssid";
 
     private ListPreference mCollapseOnDismiss;
     private ListPreference mPowerWidgetHapticFeedback;
+    
+    private CheckBoxPreference mShowWifiName;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.notification_drawer);
 
         ContentResolver resolver = getActivity().getContentResolver();
@@ -82,6 +87,10 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         mCollapseOnDismiss.setValue(String.valueOf(collapseBehaviour));
         mCollapseOnDismiss.setOnPreferenceChangeListener(this);
         updateCollapseBehaviourSummary(collapseBehaviour);
+
+        mShowWifiName = (CheckBoxPreference) findPreference(PREF_NOTIFICATION_SHOW_WIFI_SSID);
+        mShowWifiName.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NOTIFICATION_SHOW_WIFI_SSID, 0) == 1);
 
         mPowerWidgetHapticFeedback = (ListPreference)
                 prefSet.findPreference(UI_EXP_WIDGET_HAPTIC_FEEDBACK);
@@ -117,6 +126,18 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         }
 
         return false;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+            Preference preference) {
+    if (preference == mShowWifiName) {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.NOTIFICATION_SHOW_WIFI_SSID,
+                mShowWifiName.isChecked() ? 1 : 0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public static class PowerWidgetChooser extends SettingsPreferenceFragment
@@ -323,6 +344,7 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
                         pref.findIndexOfValue(rhs));
             }
         }
+
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getContentResolver();
