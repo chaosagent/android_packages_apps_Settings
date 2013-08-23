@@ -375,7 +375,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 		boolean needsNavigationBar = false, hasMenuKey = true;
 		try {
 			IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
-			needsNavigationBar = wm.needsNavigationBar();
+			needsNavigationBar = wm.hasNavigationBar();
 			hasMenuKey = wm.hasMenuKeyEnabled();
 		} catch (RemoteException e) {
 			Log.e(TAG, "Error getting navigation bar and menu key status");
