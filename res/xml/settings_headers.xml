@@ -90,7 +90,7 @@
     <header
         android:id="@+id/hybrid_settings"
         android:title="@string/hybrid_settings_title"
-        android:icon="@drawable/ic_settings_cyanfox"
+        android:icon="@drawable/ic_settings_hybrid"
         android:fragment="com.android.settings.cyanfox.HybridSettings" />
 
     <!-- System UI -->
