@@ -84,7 +84,6 @@ public class ReportingService extends Service {
             // report to google analytics
             GoogleAnalytics ga = GoogleAnalytics.getInstance(context);
             Tracker tracker = ga.getTracker(getString(R.string.ga_trackingId));
-            tracker.sendEvent(deviceName, deviceVersion, deviceCountry, null);
 
             // this really should be set at build time...
             // format of version should be:
@@ -94,21 +93,22 @@ public class ReportingService extends Service {
             if (parts.length == 2) {
                 deviceVersionNoDevice = parts[0];
             } else if (parts.length == 4) {
-                deviceVersionNoDevice = parts[0] + "-" + parts[2];
+                deviceVersionNoDevice = parts[0] + "-" + parts[1] + "-" + parts[2];
             }
 
             if (deviceVersionNoDevice != null) {
+                tracker.sendEvent("versions", deviceVersionNoDevice, deviceName, null);
                 tracker.sendEvent("checkin", deviceName, deviceVersionNoDevice, null);
             }
             tracker.close();
 
             // report to the cmstats service
             HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost("http://www.cyanfox-rom.com/stats/submit");
+            HttpPost httpPost = new HttpPost("http://www.cyanfox-rom.com/stats/submit/index.php");
             boolean success = false;
 
             try {
-                List<NameValuePair> kv = new ArrayList<NameValuePair>();
+                List<NameValuePair> kv = new ArrayList<NameValuePair>(6);
                 kv.add(new BasicNameValuePair("device_hash", deviceId));
                 kv.add(new BasicNameValuePair("device_name", deviceName));
                 kv.add(new BasicNameValuePair("device_version", deviceVersion));
@@ -139,8 +139,8 @@ public class ReportingService extends Service {
                 // use set interval
                 interval = 0;
             } else {
-                // error, try again in 2 hours
-                interval = 2L * 60L * 60L * 1000L;
+                // error, try again in 30 minutes
+                interval = 60L * 30L * 1000L;
             }
 
             ReportingServiceManager.setAlarm(context, interval);
