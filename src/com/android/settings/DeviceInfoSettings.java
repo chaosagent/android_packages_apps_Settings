@@ -89,12 +89,12 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         setValueSummary(KEY_EQUIPMENT_ID, PROPERTY_EQUIPMENT_ID);
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
-        findPreference(KEY_BUILD_NUMBER).setEnabled(false);
-        getPreferenceScreen().removePreference(findPreference(KEY_BUILD_NUMBER));
+        findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_VERSION, "ro.cf.version");
         findPreference(KEY_MOD_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        getPreferenceScreen().removePreference(findPreference(KEY_MOD_BUILD_DATE));
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
