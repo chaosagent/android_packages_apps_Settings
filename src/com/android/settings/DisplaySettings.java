@@ -74,6 +74,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
 
+    private static final String PREF_STATUS_BAR_AUTO_HIDE = "status_bar_auto_hide"; 
+    private static final String PREF_STATUS_BAR_QUICK_PEEK = "status_bar_quick_peek";
+
     // Strings used for building the summary
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
@@ -101,6 +104,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
+
+    private ListPreference mStatusBarAutoHide; 
+    private CheckBoxPreference mStatusBarQuickPeek;
 
     private ContentObserver mAccelerometerRotationObserver =
             new ContentObserver(new Handler()) {
