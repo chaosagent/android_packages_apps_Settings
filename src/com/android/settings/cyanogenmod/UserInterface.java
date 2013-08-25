@@ -50,12 +50,6 @@ public class UserInterface extends SettingsPreferenceFragment {
 
     public static final String TAG = "UserInterface";
 
-    Preference mLcdDensity;
-
-    int newDensityValue;
-
-    DensityChanger densityFragment;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,16 +57,6 @@ public class UserInterface extends SettingsPreferenceFragment {
         addPreferencesFromResource(R.xml.user_interface_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
-
-        mLcdDensity = findPreference("lcd_density_setup");
-        String currentProperty = SystemProperties.get("ro.sf.lcd_density");
-        try {
-            newDensityValue = Integer.parseInt(currentProperty);
-        } catch (Exception e) {
-            getPreferenceScreen().removePreference(mLcdDensity);
-        }
-
-        mLcdDensity.setSummary(getResources().getString(R.string.current_lcd_density) + currentProperty);
     }
 
 
