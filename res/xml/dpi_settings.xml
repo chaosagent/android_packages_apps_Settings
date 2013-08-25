@@ -18,7 +18,6 @@
 	    <Preference
 	        android:key="custom_dpi_text"
 	        android:title="@string/system_dpi_custom_title"
-	        android:title="@string/system_dpi_custom_title"
 	        android:summary="@string/system_dpi_custom_summary" />
 
     </PreferenceCategory>
