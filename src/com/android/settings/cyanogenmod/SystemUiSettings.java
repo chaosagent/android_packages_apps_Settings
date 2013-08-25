@@ -48,6 +48,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_DUAL_PANE = "dual_pane"; 
     private static final String KEY_GENERAL_OPTIONS = "general_settings_options_prefs";
     private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
+    private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
 
     private PreferenceScreen mPieControl;
     private ListPreference mExpandedDesktopPref;
@@ -56,6 +57,8 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private ListPreference mListViewInterpolator;
     private CheckBoxPreference mDualPane;
     private Preference mRamBar;
+    private CheckBoxPreference mUseAltResolver;
+    
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,6 +88,12 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         mRamBar = findPreference(KEY_RECENTS_RAM_BAR);
         mRamBar.setOnPreferenceChangeListener(this);
         updateRamBar();
+    
+        //UseAltResolver
+        mUseAltResolver = (CheckBoxPreference) findPreference(PREF_USE_ALT_RESOLVER);
+        mUseAltResolver.setChecked(Settings.System.getInt(
+                getActivity().getContentResolver(),
+                Settings.System.ACTIVITY_RESOLVER_USE_ALT, 0) == 1);
 
         //Dual Pane Settings
         mDualPane = (CheckBoxPreference) findPreference(KEY_DUAL_PANE);
@@ -202,7 +211,12 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
                     Settings.System.DUAL_PANE_PREFS,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             return true;
-        }
+        } else if (preference == mUseAltResolver) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.ACTIVITY_RESOLVER_USE_ALT,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            return true;
+        }       
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
