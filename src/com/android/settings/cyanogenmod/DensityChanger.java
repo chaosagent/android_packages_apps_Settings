@@ -113,7 +113,7 @@ public class DensityChanger extends SettingsPreferenceFragment implements
             ComponentName activityName = openMarket.resolveActivity(getActivity()
                     .getPackageManager());
             if (activityName != null) {
-                mContext.startActivity(openMarket);
+                Context.startActivity(openMarket);
             } else {
                 preference
                         .setSummary(getResources().getString(R.string.open_market_summary_could_not_open));
@@ -127,7 +127,7 @@ public class DensityChanger extends SettingsPreferenceFragment implements
 
     @Override
     public Dialog onCreateDialog(int dialogId) {
-        LayoutInflater factory = LayoutInflater.from(mContext);
+        LayoutInflater factory = LayoutInflater.from(Context);
 
         switch (dialogId) {
             case DIALOG_DENSITY:
