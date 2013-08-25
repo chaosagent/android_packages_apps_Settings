@@ -63,13 +63,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private CheckBoxPreference mDualPane;
     private Preference mRamBar;
     private CheckBoxPreference mUseAltResolver;
-
-    Preference mLcdDensity;
-
-    int newDensityValue;
-
-    DensityChanger densityFragment;
-    
    
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,16 +77,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         addPreferencesFromResource(R.xml.system_ui_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
-
-        mLcdDensity = findPreference("lcd_density_setup");
-        String currentProperty = SystemProperties.get("ro.sf.lcd_density");
-        try {
-            newDensityValue = Integer.parseInt(currentProperty);
-        } catch (Exception e) {
-            getPreferenceScreen().removePreference(mLcdDensity);
-        }
-
-        mLcdDensity.setSummary(getResources().getString(R.string.current_lcd_density) + currentProperty);
 
         //ListView Animations
         mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
