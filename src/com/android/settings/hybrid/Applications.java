@@ -21,7 +21,7 @@ import android.util.ExtendedPropertiesUtils;
 import android.widget.Toast;
 
 import com.android.settings.R;
-import com.android.settings.utils.CMDProcessor;
+import com.android.settings.util.CMDProcessor;
 
 public class Applications {
 
