@@ -22,7 +22,7 @@
 
         <PreferenceScreen
             android:key="add_app"
-            android:fragment="com.android.settings.cyanfox.AppListPreference"
+            android:fragment="com.android.settings.hybrid.AppListPreference"
             android:title="@string/dpi_group_add_app" />
 
     </PreferenceCategory>

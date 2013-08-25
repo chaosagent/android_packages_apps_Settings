@@ -1,4 +1,4 @@
-package com.android.settings.cyanfox;
+package com.android.settings.hybrid;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,9 +10,9 @@ import android.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class AppListPreference extends SettingsPreferenceFragment {
+public class WidgetListPreference extends SettingsPreferenceFragment {
 
-    private PreferenceCategory mAppList;
+    private PreferenceCategory mWidgetList;
     private Context mContext;
 
     @Override
@@ -20,21 +20,19 @@ public class AppListPreference extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
 
-        Utils.setContext(mContext);
-
-        addPreferencesFromResource(R.xml.dpi_group_app_list);
+        addPreferencesFromResource(R.xml.widget_list);
 
         final PreferenceScreen prefSet = getPreferenceScreen();
 
-        mAppList = (PreferenceCategory) prefSet.findPreference("dpi_group_app_list");
+        mWidgetList = (PreferenceCategory) prefSet.findPreference("widget_list");
 
-        Applications.CyanfoxAppInfo[] items = Applications.getApplicationList(mContext);
+        Applications.AppInfo[] items = Applications.getApplicationList(mContext);
 
-        mAppList.removeAll();
+        mWidgetList.removeAll();
 
         for (int i = 0; i < items.length; i++) {
             Preference pref = new Preference(mContext);
-            Applications.CyanfoxAppInfo bAppInfo = items[i];
+            Applications.AppInfo bAppInfo = items[i];
 
             pref.setKey(bAppInfo.pack);
             pref.setTitle(bAppInfo.name);
@@ -44,12 +42,12 @@ public class AppListPreference extends SettingsPreferenceFragment {
             pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 
                 public boolean onPreferenceClick(final Preference preference) {
-                    Applications.addApplication(mContext, preference.getKey());
+                    Applications.addWidget(mContext, preference.getKey());
                     getActivity().getFragmentManager().popBackStackImmediate();
                     return false;
                 }
             });
-            mAppList.addPreference(pref);
+            mWidgetList.addPreference(pref);
         }
 
     }

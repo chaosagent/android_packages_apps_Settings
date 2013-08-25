@@ -74,7 +74,7 @@
         android:id="@+id/hybrid_settings"
         android:title="@string/hybrid_settings_title"
         android:icon="@drawable/ic_settings_hybrid"
-        android:fragment="com.android.settings.cyanfox.HybridSettings" />
+        android:fragment="com.android.settings.hybrid.HybridSettings" />
 
     <!-- Homescreen -->
     <header
