@@ -29,7 +29,7 @@ import java.security.MessageDigest;
 public class Utilities {
     public static String getUniqueID(Context context) {
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        final String id = tm.getDeviceId();
+        String id = tm.getDeviceId();
         if (id == null) {
             id = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
         }
