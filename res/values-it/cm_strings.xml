@@ -57,9 +57,9 @@
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memoria</string>
     <string name="anonymous_statistics_title">Statistiche CyanFox</string>
-    <string name="anonymous_statistics_summary">Aiuta a migliorare la Cyanogenmod acconsentendo ad inviare statistiche anonime</string>
+    <string name="anonymous_statistics_summary">Aiuta a migliorare la CyanFox acconsentendo ad inviare statistiche anonime</string>
     <string name="anonymous_statistics_warning_title">Informazioni</string>
-    <string name="anonymous_statistics_warning">Consentire di inviare statistiche anonime permetterà l\'invio di dati non personali agli sviluppatori di Cyanogenmod per contare il numero di installazioni uniche sui diversi dispositivi. Le informazioni inviate includono un identificativo univoco che non compromette la tua privacy o i tuoi dati personali. I dati sono inviati ad ogni avvio.\n\nPer un esempio dei dati inviati premere su Anteprima dati.</string>
+    <string name="anonymous_statistics_warning">Consentire di inviare statistiche anonime permetterà l\'invio di dati non personali agli sviluppatori di CyanFox per contare il numero di installazioni uniche sui diversi dispositivi. Le informazioni inviate includono un identificativo univoco che non compromette la tua privacy o i tuoi dati personali. I dati sono inviati ad ogni avvio.\n\nPer un esempio dei dati inviati premere su Anteprima dati.</string>
     <string name="enable_reporting_title">Attiva invio</string>
     <string name="preview_data_title">Anteprima dati</string>
     <string name="view_stats_title">Guarda statistiche</string>
