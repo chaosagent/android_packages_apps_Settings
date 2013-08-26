@@ -72,11 +72,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         PreferenceScreen prefScreen = getPreferenceScreen();
 
         mPieControl = (PreferenceScreen) findPreference(KEY_PIE_CONTROL);
-      
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.system_ui_settings);
-
-        PreferenceScreen prefs = getPreferenceScreen();
 
         //ListView Animations
         mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
