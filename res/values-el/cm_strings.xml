@@ -56,16 +56,16 @@
     <string name="notification_vibrate_during_calls_title">Δόνηση κατά την κλήση</string>
     <string name="notification_vibrate_during_calls_summary">Δόνηση στις εισερχόμενες ειδοποιήσεις κατά την διάρκεια μιας κλήσης</string>
     <string name="device_hostname">Hostname συσκευής</string>
-    <string name="mod_version">Έκδοση CyanFox</string>
+    <string name="mod_version">Έκδοση CyanogenMod</string>
     <string name="mod_version_default">Άγνωστη</string>
     <string name="build_date">Ημερομηνία έκδοσης</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Μνήμη</string>
-    <string name="anonymous_statistics_title">Στατιστικά CyanFox</string>
-    <string name="anonymous_statistics_summary">Βοηθήστε το CyanFox να γίνει καλύτερο ενεργοποιώντας την αποστολή ανώνυμων στατιστικών στοιχείων</string>
+    <string name="anonymous_statistics_title">Στατιστικά CyanogenMod</string>
+    <string name="anonymous_statistics_summary">Βοηθήστε το CyanogenMod να γίνει καλύτερο ενεργοποιώντας την αποστολή ανώνυμων στατιστικών στοιχείων</string>
     <string name="anonymous_statistics_warning_title">Σχετικά</string>
-    <string name="anonymous_statistics_warning">Ενεργοποιώντας τα στατιστικά του CyanFox επιτρέπετε την αποστολή
-        μη προσωπικών δεδομένων στους προγραμματιστές του CyanFox για παρακολούθηση του αριθμού μοναδικών εγκαταστάσεων
+    <string name="anonymous_statistics_warning">Ενεργοποιώντας τα στατιστικά του CyanogenMod επιτρέπετε την αποστολή
+        μη προσωπικών δεδομένων στους προγραμματιστές του CyanogenMod για παρακολούθηση του αριθμού μοναδικών εγκαταστάσεων
         σε όλες τις συσκευές. Οι πληροφορίες που αποστέλλονται συμπεριλαμβάνουν ένα μοναδικό αναγνωριστικό, το οποίο δεν θέτει
         σε κίνδυνο την ασφάλεια σας ή τα προσωπικά δεδομένα. Τα δεδομένα αποστέλλονται σε κάθε εκκίνηση.\n\nΓια ένα παράδειγμα
         των δεδομένων που αποστέλλονται, πατήστε στην Προεπισκόπηση δεδομένων.</string>
@@ -73,7 +73,7 @@
     <string name="preview_data_title">Προεπισκόπηση δεδομένων</string>
     <string name="view_stats_title">Εμφάνιση στατιστικών</string>
     <string name="anonymous_learn_more">Μάθετε περισσότερα</string>
-    <string name="anonymous_notification_desc">Ενεργοποίηση ή απενεργοποίηση των στατιστικών του CyanFox</string>
+    <string name="anonymous_notification_desc">Ενεργοποίηση ή απενεργοποίηση των στατιστικών του CyanogenMod</string>
     <string name="preview_id_title">Μοναδικό αναγνωριστικό</string>
     <string name="preview_device_title">Συσκευή</string>
     <string name="preview_version_title">Έκδοση</string>
@@ -306,6 +306,8 @@
     <string name="notification_light_default_value">Προεπιλογή</string>
     <string name="notification_light_missed_call_title">Αναπάντητη κλήση</string>
     <string name="notification_light_voicemail_title">Μήνυμα τηλεφωνητή</string>
+    <string name="adaptive_backlight_title">Προσαρμοζόμενη φωτεινότητα</string>
+    <string name="adaptive_backlight_summary">Έξυπνη μεταβολή της φωτεινότητας που συμβάλλει στη μεγιστοποίηση της ζωής της μπαταρίας</string>
     <string name="edit_light_settings">Επεξεργασία φωτεινού παλμού</string>
     <string name="pulse_speed_title">Ταχύτητα και μήκος παλμού</string>
     <string name="default_time">Κανονικό</string>
@@ -350,6 +352,7 @@
     <string name="hardware_keys_volume_keys_title">Πλήκτρα έντασης</string>
     <string name="hardware_keys_short_press_title">Ενέργεια απλής πίεσης</string>
     <string name="hardware_keys_long_press_title">Ενέργεια παρατεταμένης πίεσης</string>
+    <string name="hardware_keys_double_tap_title">Ενέργεια διπλού χτυπήματος</string>
     <string name="hardware_keys_show_overflow_title">Εμφάνιση action overflow</string>
     <string name="hardware_keys_show_overflow_summary">Εμφανίζει το πλήκτρο overflow με τις 3 τελείες στις εφαρμογές</string>
     <string name="hardware_keys_show_overflow_toast_enable">Το πλήκτρο δεν θα είναι ορατό μέχρι την επανεκκίνηση των εφαρμογών</string>
@@ -376,40 +379,6 @@
     <string name="navigation_bar_reset_toast">Έγινε επαναφορά των ρυθμίσεων της Μπάρας πλοήγησης</string>
     <string name="navigation_bar_menu_editable">Επεξεργάσιμο</string>
     <string name="navigation_bar_menu_locked">Κλειδωμένο</string>
-    <string name="power_widget_title">Power widget</string>
-    <string name="title_expanded_widget">Power widget</string>
-    <string name="title_expanded_hide_onchange">Κλείσιμο συρταριού κατά την αλλαγή</string>
-    <string name="title_expanded_hide_scrollbar">Απόκρυψη μπάρας ολίσθισης</string>
-    <string name="title_widget_picker">Πλήκτρα widget</string>
-    <string name="summary_widget_picker">Επιλέξτε τα πλήκτρα που θα εμφανίζονται στο power widget</string>
-    <string name="title_widget_order">Σειρά πλήκτρων widget</string>
-    <string name="summary_widget_order">Επιλέξτε τη σειρά των πλήκτρων του power widget</string>
-    <string name="title_buttons">Πλήκτρα</string>
-    <string name="title_toggle_wifi">Wi-Fi</string>
-    <string name="title_toggle_bluetooth">Bluetooth</string>
-    <string name="title_toggle_gps">GPS</string>
-    <string name="title_toggle_sound">Ήχος</string>
-    <string name="title_toggle_brightness">Φωτεινότητα</string>
-    <string name="title_toggle_sync">Συγχρονισμός</string>
-    <string name="title_toggle_wifiap">Φορητό σημείο πρόσβασης Wi-Fi</string>
-    <string name="title_toggle_screentimeout">Χρονικό όριο οθόνης</string>
-    <string name="title_toggle_mobiledata">Δεδομένα</string>
-    <string name="title_toggle_lockscreen">Οθόνη κλειδώματος</string>
-    <string name="title_toggle_networkmode">Εναλλαγή λειτ. δικτύου</string>
-    <string name="title_toggle_autorotate">Προσανατολισμός</string>
-    <string name="title_toggle_airplane">Λειτουργία πτήσης</string>
-    <string name="title_toggle_flashlight">Φακός</string>
-    <string name="title_toggle_sleep">Αναστολή λειτουργίας</string>
-    <string name="title_toggle_media_play_pause">Μέσα: Αναπαρ./Παύση</string>
-    <string name="title_toggle_media_previous">Μέσα: Προηγούμενο</string>
-    <string name="title_toggle_media_next">Μέσα: Επόμενο</string>
-    <string name="title_toggle_lte">LTE</string>
-    <string name="title_toggle_wimax">WiMAX</string>
-    <string name="title_button_modes">Λειτουργία πλήκτρων</string>
-    <string name="pref_brightness_mode_title">Φωτεινότητα</string>
-    <string name="pref_brightness_mode_summary">Επιλέξτε τις εναλλαγές που θα γίνονται με το πλήκτρο φωτεινότητας</string>
-    <string name="cm_brightness_mode_auto">Αυτόματη</string>
-    <string name="cm_brightness_mode_dim">Συσκότιση</string>
     <string name="pref_network_mode_title">Δίκτυο</string>
     <string name="pref_screentimeout_mode_title">Χρονικό όριο οθόνης</string>
     <string name="pref_ring_mode_title">Ήχος</string>
@@ -418,8 +387,6 @@
     <string name="cm_sound_mode_vibrate">Δόνηση</string>
     <string name="cm_sound_mode_sound">Ήχος</string>
     <string name="cm_sound_mode_soundVibrate">Ήχος &amp; Δόνηση</string>
-    <string name="pref_flash_mode_title">Φακός</string>
-    <string name="expanded_haptic_feedback_title">Απτική ανάδραση</string>
     <string name="kill_app_longpress_back">Τερμ. με πλήκτρο πίσω</string>
     <string name="kill_app_longpress_back_summary">Το πλήκτρο πίσω τερματίζει την τρέχουσα εφαρμογή</string>
     <string name="changelog_title">Εμφάνιση αρχείου αλλαγών</string>
@@ -438,7 +405,7 @@
     <string name="power_menu_airplane_title">Λειτουργία πτήσης</string>
     <string name="power_menu_user_title">Εναλλαγή χρήστη</string>
     <string name="power_menu_sound_title">Πάνελ έντασης</string>
-    <string name="cmupdate_settings_title">Ενημερώσεις CyanFox</string>
+    <string name="cmupdate_settings_title">Ενημερώσεις CyanogenMod</string>
     <string name="cmupdate_settings_summary">Έλεγχος και εγκατάσταση διαθέσιμων ενημερώσεων</string>
     <string name="advanced_settings_title">Για προχωρημένους</string>
     <string name="ime_switcher_notify">Ειδοποίηση επιλογέα</string>
@@ -483,7 +450,6 @@
     <string name="lockscreen_buttons_playpause">Αναπαραγ./Παύση μουσικής</string>
     <string name="lockscreen_buttons_toggle_sound">Ενεργ./Απενεργ. ήχου</string>
     <string name="quick_settings_panel_title">Πάνελ Γρήγορων ρυθμίσεων</string>
-    <string name="quick_settings_title">Γρήγορες ρυθμίσεις</string>
     <string name="title_static_tiles">Στατικά πλακίδια</string>
     <string name="tile_picker_title">Πλακίδια και διάταξη</string>
     <string name="tile_picker_summary">Εμφάνιση, επιλογή ή αλλαγή της διάταξης των πλακιδίων που εμφανίζονται</string>
@@ -568,7 +534,7 @@
     <string name="headset_connect_player_summary">Εκκίνηση της προεπιλεγμένης εφαρμογής μουσικής κατα τη σύνδεση ακουστικών</string>
     <string name="safe_headset_volume_title">Ασφαλής ένταση ακουστικών</string>
     <string name="cyanogenmod_waiver_title">Απαλλαγή ευθυνών</string>
-    <string name="cyanogenmod_waiver_body">Η αλλαγή αυτής της ρύθμισης μπορεί να είναι ενάντια στη νομοθεσία της πολιτείας ή της κυβέρνησης σας.\n\nΕπιλέγοντας \'OK\' παρακάτω, αποδέχεστε αυτή την προειδοποίηση και απαλλάσετε το CyanFox και τους συνεργάτες του από όλες τις νομικές ευθύνες και υποχρεώσεις.</string>
+    <string name="cyanogenmod_waiver_body">Η αλλαγή αυτής της ρύθμισης μπορεί να είναι ενάντια στη νομοθεσία της πολιτείας ή της κυβέρνησης σας.\n\nΕπιλέγοντας \'OK\' παρακάτω, αποδέχεστε αυτή την προειδοποίηση και απαλλάσετε το CyanogenMod και τους συνεργάτες του από όλες τις νομικές ευθύνες και υποχρεώσεις.</string>
     <string name="light_sensor_current_value">Τρέχουσα τιμή του αισθητήρα φωτός: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_setup_title">Αυτόματη φωτεινότητα</string>
     <string name="auto_brightness_adjustment_title">Ρύθμιση φωτεινότητας</string>
@@ -739,6 +705,9 @@
     <string name="color_red_title">Κόκκινο</string>
     <string name="color_green_title">Πράσινο</string>
     <string name="color_blue_title">Μπλε</string>
+    <string name="category_gamma_title">Γάμμα</string>
+    <string name="gamma_tuning_title_head">Βελτίωση γάμμα</string>
+    <string name="gamma_tuning_summary_head">Βελτίωση επιπέδων γάμμα της οθόνης</string>
     <string name="more_device_controls_title">Περισσότερα\u2026</string>
     <string name="more_device_settings_title">Άλλες ρυθμίσεις συσκευής</string>
     <string name="sensors_motors_title">Αισθητήρες &amp; κινητήρες</string>

@@ -1705,6 +1705,8 @@
 
         <activity android:name=".cyanogenmod.QuickSettings" />
 
+        <activity android:name=".cyanogenmod.NotificationDrawer" />
+
         <activity android:name=".cyanogenmod.MoreDeviceSettings" />
         
         <activity android:name=".cyanogenmod.RamBar" />
@@ -1871,8 +1873,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".hybrid.HybridSettings" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"

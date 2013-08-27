@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,55 +15,51 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="wifi_countrycode_entries">
-        <item>Egyesült államok</item>
-        <item>Kanada, Tajvan</item>
-        <item>Németország</item>
-        <item>Európa</item>
-        <item>Japán, Oroszország</item>
-        <item>Ausztrália</item>
-        <item>Kína</item>
+        <item>USA</item>
+        <item>Kanada, Taiwan</item>
+        <item>Tyskland</item>
+        <item>Europa</item>
+        <item>Japan, Ryssland</item>
+        <item>Australien</item>
+        <item>Kina</item>
         <item>Korea</item>
-        <item>Törökország</item>
-        <item>Szingapur</item>
-        <item>Brazília</item>
+        <item>Turkiet</item>
+        <item>Singapore</item>
+        <item>Brasilien</item>
     </string-array>
     <string-array name="volume_overlay_entries">
-        <item>Egyszerű</item>
-        <item>Kiterjeszthető</item>
-        <item>Kiterjesztett</item>
-        <item>Nincs</item>
+        <item>Enkel</item>
+        <item>Utökningsbar</item>
+        <item>Utökad</item>
+        <item>Ingen</item>
     </string-array>
     <string-array name="pref_zram_size_entries">
-        <item>Letiltva</item>
+        <item>Avaktiverad</item>
         <item>10%</item>
-        <item>18% (alapbeállítás)</item>
+        <item>18% (standard)</item>
         <item>26%</item>
     </string-array>
     <string-array name="profile_entries">
-        <item>Be</item>
-        <item>Ki</item>
-        <item>Nincs felülbírálás</item>
+        <item>På</item>
+        <item>Av</item>
+        <item>Ingen åsidosättning</item>
     </string-array>
     <string-array name="profile_connection_entries">
-        <item>Letiltva</item>
-        <item>Engedélyezve</item>
-    </string-array>
-    <string-array name="entries_screentimeout_widget">
-        <item>15mp/1p/5p</item>
-        <item>30mp/2p/5p</item>
+        <item>Avaktivera</item>
+        <item>Aktivera</item>
     </string-array>
     <string-array name="entries_flash_widget">
-        <item>Normál</item>
-        <item>Magas</item>
+        <item>Normal</item>
+        <item>Hög</item>
     </string-array>
     <string-array name="haptic_feedback_entries">
-        <item>Alapértelmezett</item>
-        <item>Be</item>
-        <item>Ki</item>
+        <item>Använd global inställning</item>
+        <item>På</item>
+        <item>Av</item>
     </string-array>
     <string-array name="entries_status_bar_am_pm">
-        <item>Normál</item>
-        <item>Kicsi</item>
-        <item>Elrejtés</item>
+        <item>Normal</item>
+        <item>Liten</item>
+        <item>Ingen</item>
     </string-array>
 </resources>

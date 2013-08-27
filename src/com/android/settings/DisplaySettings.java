@@ -90,7 +90,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mWakeWhenPluggedOrUnplugged;
     private Preference mRamBar;
     private PreferenceScreen mDisplayRotationPreference;
+<<<<<<< HEAD
     private FontDialogPreference mFontSizePref; 
+=======
+    private FontDialogPreference mFontSizePref;
+>>>>>>> 3a3f28ad7d04812708095febc9d6371d92e90596
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -158,7 +162,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         updateTimeoutPreferenceDescription(currentTimeout);
         updateDisplayRotationPreferenceDescription();
 
+<<<<<<< HEAD
         mFontSizePref = (FontDialogPreference) findPreference(KEY_FONT_SIZE); 
+=======
+        mFontSizePref = (FontDialogPreference) findPreference(KEY_FONT_SIZE);
+>>>>>>> 3a3f28ad7d04812708095febc9d6371d92e90596
         mFontSizePref.setOnPreferenceChangeListener(this);
         mFontSizePref.setOnPreferenceClickListener(this);
 
@@ -173,7 +181,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         mAdaptiveBacklight = (CheckBoxPreference) findPreference(KEY_ADAPTIVE_BACKLIGHT);
-        if (!AdaptiveBacklight.isSupported()) {
+        if (!isAdaptiveBacklightSupported()) {
             getPreferenceScreen().removePreference(mAdaptiveBacklight);
             mAdaptiveBacklight = null;
         }
@@ -317,6 +325,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         screenTimeoutPreference.setEnabled(revisedEntries.size() > 0);
     }
 
+<<<<<<< HEAD
     
     
     private void updateCustomLabelTextSummary() {
@@ -329,6 +338,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
     } 
 
+=======
+>>>>>>> 3a3f28ad7d04812708095febc9d6371d92e90596
     @Override
     public void onResume() {
         super.onResume();
@@ -465,7 +476,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         pref.setSummary(String.format(res.getString(R.string.summary_font_size),
                 fontDesc, scalePercent));
+<<<<<<< HEAD
     }  
+=======
+    }
+>>>>>>> 3a3f28ad7d04812708095febc9d6371d92e90596
 
     public void writeFontSizePreference(Object objValue) {
         try {
@@ -490,7 +505,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
+<<<<<<< HEAD
     @Override 
+=======
+    @Override
+>>>>>>> 3a3f28ad7d04812708095febc9d6371d92e90596
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
         if (KEY_SCREEN_TIMEOUT.equals(key)) {
@@ -538,7 +557,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
      * @param ctx A valid context
      */
     public static void restore(Context ctx) {
-        if (AdaptiveBacklight.isSupported()) {
+        if (isAdaptiveBacklightSupported()) {
             final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
             final boolean enabled = prefs.getBoolean(KEY_ADAPTIVE_BACKLIGHT, true);
             if (!AdaptiveBacklight.setEnabled(enabled)) {
@@ -546,6 +565,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             } else {
                 Log.d(TAG, "Adaptive backlight settings restored.");
             }
+        }
+    }
+
+    private static boolean isAdaptiveBacklightSupported() {
+        try {
+            return AdaptiveBacklight.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
         }
     }
 }
