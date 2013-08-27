@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/value"
-                settings:min="0.85"
+                settings:min=".85"
                 settings:max="1.30"
                 settings:defaultValue="1.00"
                 settings:digits="2"
