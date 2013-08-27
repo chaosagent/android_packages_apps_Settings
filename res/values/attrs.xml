@@ -93,17 +93,16 @@
         <attr name="margin" format="dimension" />
     </declare-styleable>
 
-<<<<<<< HEAD
     <declare-styleable name="SeekBarPreference">
         <attr name="min" format="integer" />
         <attr name="unitsLeft" format="string" />
         <attr name="unitsRight" format="string" />
-=======
+    </declare-styleable>
+
     <declare-styleable name="IntervalSeekBar">
         <attr name="min" format="float" />
         <attr name="max" format="float" />
         <attr name="defaultValue" format="float" />
         <attr name="digits" format="integer" />
->>>>>>> 493e9e70b9817f9d14897ae84e9d3bbd25f8c78f
     </declare-styleable>
 </resources>

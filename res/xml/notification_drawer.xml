@@ -26,16 +26,12 @@
         android:entries="@array/notification_drawer_collapse_on_dismiss_entries"
         android:entryValues="@array/notification_drawer_collapse_on_dismiss_values" />
 
-<<<<<<< HEAD
     <CheckBoxPreference
             android:key="notification_show_wifi_ssid"
             android:title="@string/notification_show_wifi_ssid_title"
             android:summary="@string/notification_show_wifi_ssid_summary"
             android:defaultValue="true" />
 
-    <!-- Notification drawer Power Widget -->
-=======
->>>>>>> 493e9e70b9817f9d14897ae84e9d3bbd25f8c78f
     <PreferenceCategory
         android:title="@string/category_quick_access" >
 
