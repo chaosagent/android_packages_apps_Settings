@@ -1873,8 +1873,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".cyanfox.HybridSettings" />
-
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"

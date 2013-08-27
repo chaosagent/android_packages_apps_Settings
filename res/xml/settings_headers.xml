@@ -86,13 +86,6 @@
             android:targetClass="com.tmobile.themechooser.ThemeChooser" />
     </header>
 
-    <!-- Hybrid -->
-    <header
-        android:id="@+id/hybrid_settings"
-        android:title="@string/hybrid_settings_title"
-        android:icon="@drawable/ic_settings_cyanfox"
-        android:fragment="com.android.settings.cyanfox.HybridSettings" />
-
     <!-- System UI -->
     <header
         android:id="@+id/system_settings"
