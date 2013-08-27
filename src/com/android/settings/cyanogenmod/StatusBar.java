@@ -40,12 +40,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_BATTERY = "status_bar_battery";
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
-    private static final String PREF_STATUS_BAR_TRAFFIC = "status_bar_traffic";
+    private static final String PREF_STATUS_BAR_TRAFFIC_ENABLE = "status_bar_traffic_enable";
+    private static final String PREF_STATUS_BAR_TRAFFIC_HIDE = "status_bar_traffic_hide"; 
 
     private ListPreference mStatusBarAmPm;
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarCmSignal;
-    private CheckBoxPreference mStatusBarTraffic;
+    private CheckBoxPreference mStatusBarTraffic_enable;
+    private CheckBoxPreference mStatusBarTraffic_hide; 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarAmPm = (ListPreference) prefSet.findPreference(STATUS_BAR_AM_PM);
         mStatusBarBattery = (ListPreference) prefSet.findPreference(STATUS_BAR_BATTERY);
         mStatusBarCmSignal = (ListPreference) prefSet.findPreference(STATUS_BAR_SIGNAL);
-        mStatusBarTraffic = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_TRAFFIC);
+        mStatusBarTraffic_enable = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_TRAFFIC_ENABLE);
+        mStatusBarTraffic_enable.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.STATUS_BAR_TRAFFIC_ENABLE, 0) == 1));
+
+        mStatusBarTraffic_hide = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_TRAFFIC_HIDE);
+        mStatusBarTraffic_hide.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.STATUS_BAR_TRAFFIC_HIDE, 1) == 1));
 
         if (DateFormat.is24HourFormat(getActivity())) {
             ((PreferenceCategory) prefSet.findPreference(STATUS_BAR_CLOCK_CATEGORY))
@@ -94,10 +102,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         int signalStyle = Settings.System.getInt(resolver, Settings.System.STATUS_BAR_SIGNAL_TEXT, 0);
         mStatusBarCmSignal.setValue(String.valueOf(signalStyle));
         mStatusBarCmSignal.setSummary(mStatusBarCmSignal.getEntry());
-        mStatusBarCmSignal.setOnPreferenceChangeListener(this);
-        
-        mStatusBarTraffic.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.STATUS_BAR_TRAFFIC, 0) == 1));  
+        mStatusBarCmSignal.setOnPreferenceChangeListener(this);  
 
         PreferenceCategory generalCategory =
                 (PreferenceCategory) findPreference(STATUS_BAR_CATEGORY_GENERAL);
@@ -139,11 +144,16 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
-        if (preference == mStatusBarTraffic) {
-             value = mStatusBarTraffic.isChecked();
+        if (preference == mStatusBarTraffic_enable) {
+            value = mStatusBarTraffic_enable.isChecked(
              Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                     Settings.System.STATUS_BAR_TRAFFIC, value ? 1 : 0);
+                  Settings.System.STATUS_BAR_TRAFFIC_ENABLE, value ? 1 : 0);
             return true;
+        } else if (preference == mStatusBarTraffic_hide) {
+            value = mStatusBarTraffic_hide.isChecked();
+             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                  Settings.System.STATUS_BAR_TRAFFIC_HIDE, value ? 1 : 0);
+            return true;   
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
