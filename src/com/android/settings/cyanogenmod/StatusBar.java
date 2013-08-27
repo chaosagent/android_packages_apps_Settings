@@ -42,12 +42,16 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
     private static final String PREF_STATUS_BAR_TRAFFIC_ENABLE = "status_bar_traffic_enable";
     private static final String PREF_STATUS_BAR_TRAFFIC_HIDE = "status_bar_traffic_hide"; 
+    private static final String PREF_STATUS_BAR_AUTO_HIDE = "status_bar_auto_hide"; 
+    private static final String PREF_STATUS_BAR_QUICK_PEEK = "status_bar_quick_peek";
 
     private ListPreference mStatusBarAmPm;
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarCmSignal;
     private CheckBoxPreference mStatusBarTraffic_enable;
     private CheckBoxPreference mStatusBarTraffic_hide; 
+    private ListPreference mStatusBarAutoHide; 
+    private CheckBoxPreference mStatusBarQuickPeek;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,17 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mStatusBarAutoHide = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_AUTO_HIDE);
+        int statusBarAutoHideValue = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.AUTO_HIDE_STATUSBAR, 0);
+        mStatusBarAutoHide.setValue(String.valueOf(statusBarAutoHideValue));
+        updateStatusBarAutoHideSummary(statusBarAutoHideValue);
+        mStatusBarAutoHide.setOnPreferenceChangeListener(this);  
+
+        mStatusBarQuickPeek = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_QUICK_PEEK);
+        mStatusBarQuickPeek.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.STATUSBAR_PEEK, 0) == 1));
 
         mStatusBarAmPm = (ListPreference) prefSet.findPreference(STATUS_BAR_AM_PM);
         mStatusBarBattery = (ListPreference) prefSet.findPreference(STATUS_BAR_BATTERY);
@@ -137,6 +152,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(resolver, Settings.System.STATUS_BAR_SIGNAL_TEXT, signalStyle);
             mStatusBarCmSignal.setSummary(mStatusBarCmSignal.getEntries()[index]);
             return true;
+        } else if (preference == mStatusBarAutoHide) {
+            int statusBarAutoHideValue = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.AUTO_HIDE_STATUSBAR, statusBarAutoHideValue);
+            updateStatusBarAutoHideSummary(statusBarAutoHideValue);
+            return true;
         }
 
         return false;
@@ -153,8 +174,24 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             value = mStatusBarTraffic_hide.isChecked();
              Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                   Settings.System.STATUS_BAR_TRAFFIC_HIDE, value ? 1 : 0);
-            return true;   
+            return true; 
+        } else if (preference == mStatusBarQuickPeek) {
+            value = mStatusBarQuickPeek.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUSBAR_PEEK, value ? 1 : 0);
+            return true; 
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
+
+    private void updateStatusBarAutoHideSummary(int value) {
+        if (value == 0) {
+            /* StatusBar AutoHide deactivated */
+            mStatusBarAutoHide.setSummary(getResources().getString(R.string.auto_hide_statusbar_off));
+        } else {
+            mStatusBarAutoHide.setSummary(getResources().getString(value == 1
+                    ? R.string.auto_hide_statusbar_summary_nonperm
+                    : R.string.auto_hide_statusbar_summary_all));
+        }
+    } 
 }
