@@ -1114,6 +1114,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Navigation bar custom options -->
     <string name="navbar_cat">Navigation bar settings</string>
     <string name="navbar_style_dimen_title">Navigation bar dimensions</string>
+    <string name="navbar_restart_systemui_summary">Change this option will restart SystemUI</string>
     <string name="menu_nav_bar_style_reset">Reset navbar style</string>
     <string name="menu_nav_bar_dimen_reset">Reset navbar dimens</string>
     <string name="navbar_dimen_cat">Navigation bar dimens</string>
