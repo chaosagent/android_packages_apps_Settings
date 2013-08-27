@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2011 The CyanogenMod Project
+ * Copyright (C) 2012 The CyanogenMod project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,53 +16,34 @@
 
 package com.android.settings.cyanogenmod;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
-import android.app.ListFragment;
 import android.content.ContentResolver;
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.net.wimax.WimaxHelper;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
-import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.view.WindowManagerGlobal;
 
+<<<<<<< HEAD
 import com.android.internal.telephony.Phone;
+=======
+import com.android.settings.R;
+>>>>>>> 493e9e70b9817f9d14897ae84e9d3bbd25f8c78f
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.Utils;
 
-import static com.android.internal.util.cm.QSUtils.deviceSupportsMobileData;
-
-public class NotificationDrawer extends SettingsPreferenceFragment implements
+public class NotificationDrawer extends SettingsPreferenceFragment  implements
         Preference.OnPreferenceChangeListener {
-    private static final String TAG = "PowerWidget";
-    private static final String SEPARATOR = "OV=I=XseparatorX=I=VO";
+    private static final String TAG = "NotificationDrawer";
+
     private static final String UI_COLLAPSE_BEHAVIOUR = "notification_drawer_collapse_on_dismiss";
+<<<<<<< HEAD
     private static final String UI_EXP_WIDGET_HAPTIC_FEEDBACK = "expanded_haptic_feedback";
     private static final String PREF_NOTIFICATION_SHOW_WIFI_SSID = "notification_show_wifi_ssid";
 
@@ -70,23 +51,27 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
     private ListPreference mPowerWidgetHapticFeedback;
     
     private CheckBoxPreference mShowWifiName;
+=======
+
+    private ListPreference mCollapseOnDismiss;
+>>>>>>> 493e9e70b9817f9d14897ae84e9d3bbd25f8c78f
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.notification_drawer);
+        PreferenceScreen prefScreen = getPreferenceScreen();
 
-        ContentResolver resolver = getActivity().getContentResolver();
-        PreferenceScreen prefSet = getPreferenceScreen();
-
-        int collapseBehaviour = Settings.System.getInt(resolver,
+        // Notification drawer
+        int collapseBehaviour = Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_COLLAPSE_ON_DISMISS,
                 Settings.System.STATUS_BAR_COLLAPSE_IF_NO_CLEARABLE);
-        mCollapseOnDismiss = (ListPreference) prefSet.findPreference(UI_COLLAPSE_BEHAVIOUR);
+        mCollapseOnDismiss = (ListPreference) findPreference(UI_COLLAPSE_BEHAVIOUR);
         mCollapseOnDismiss.setValue(String.valueOf(collapseBehaviour));
         mCollapseOnDismiss.setOnPreferenceChangeListener(this);
         updateCollapseBehaviourSummary(collapseBehaviour);
+<<<<<<< HEAD
 
         mShowWifiName = (CheckBoxPreference) findPreference(PREF_NOTIFICATION_SHOW_WIFI_SSID);
         mShowWifiName.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
@@ -98,36 +83,23 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         mPowerWidgetHapticFeedback.setSummary(mPowerWidgetHapticFeedback.getEntry());
         mPowerWidgetHapticFeedback.setValue(Integer.toString(Settings.System.getInt(
                 resolver, Settings.System.EXPANDED_HAPTIC_FEEDBACK, 2)));
+=======
+>>>>>>> 493e9e70b9817f9d14897ae84e9d3bbd25f8c78f
     }
 
-    private void updateCollapseBehaviourSummary(int setting) {
-        String[] summaries = getResources().getStringArray(
-                R.array.notification_drawer_collapse_on_dismiss_summaries);
-        mCollapseOnDismiss.setSummary(summaries[setting]);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mCollapseOnDismiss) {
-            int value = Integer.valueOf((String) newValue);
-            Settings.System.putInt(resolver,
+            int value = Integer.valueOf((String) objValue);
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_COLLAPSE_ON_DISMISS, value);
             updateCollapseBehaviourSummary(value);
-            return true;
-        } else if (preference == mPowerWidgetHapticFeedback) {
-            int intValue = Integer.parseInt((String) newValue);
-            int index = mPowerWidgetHapticFeedback.findIndexOfValue((String) newValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.EXPANDED_HAPTIC_FEEDBACK, intValue);
-            mPowerWidgetHapticFeedback.setSummary(mPowerWidgetHapticFeedback.getEntries()[index]);
             return true;
         }
 
         return false;
     }
 
+<<<<<<< HEAD
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
@@ -564,6 +536,11 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
                 return v;
             }
         }
+=======
+    private void updateCollapseBehaviourSummary(int setting) {
+        String[] summaries = getResources().getStringArray(
+                R.array.notification_drawer_collapse_on_dismiss_summaries);
+        mCollapseOnDismiss.setSummary(summaries[setting]);
+>>>>>>> 493e9e70b9817f9d14897ae84e9d3bbd25f8c78f
     }
-
 }
