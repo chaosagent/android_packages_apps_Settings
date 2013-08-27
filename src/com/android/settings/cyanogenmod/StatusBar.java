@@ -145,7 +145,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
         if (preference == mStatusBarTraffic_enable) {
-            value = mStatusBarTraffic_enable.isChecked(
+            value = mStatusBarTraffic_enable.isChecked();
              Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                   Settings.System.STATUS_BAR_TRAFFIC_ENABLE, value ? 1 : 0);
             return true;
