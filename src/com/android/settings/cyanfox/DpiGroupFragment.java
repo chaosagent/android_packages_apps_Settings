@@ -1,4 +1,4 @@
-package com.android.settings.hybrid;
+package com.android.settings.cyanfox;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -12,12 +12,14 @@ import android.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class Widgets extends SettingsPreferenceFragment {
+public class DpiGroupFragment extends SettingsPreferenceFragment {
 
-    private PreferenceCategory mWidgetList;
+    private PreferenceCategory mAppList;
     private Context mContext;
 
-    public Widgets() {
+    private int mDpi = -1;
+
+    public DpiGroupFragment() {
 
     }
 
@@ -25,15 +27,30 @@ public class Widgets extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // mDpi = getArguments().getInt("dpi");
+
         mContext = getActivity();
 
-        addPreferencesFromResource(R.xml.widgets);
+        Utils.setContext(mContext);
+
+        addPreferencesFromResource(R.xml.dpi_group);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        mWidgetList = (PreferenceCategory) prefSet.findPreference("widget_list");
+        PreferenceCategory tit = (PreferenceCategory) prefSet.findPreference("dpi_group_fragment_title");
+        tit.setTitle(getDpi() + " DPI");
+
+        mAppList = (PreferenceCategory) prefSet.findPreference("app_list");
 
         updateList();
+    }
+
+    public int getDpi() {
+        return mDpi;
+    }
+
+    public void setDpi(int dpi) {
+        mDpi = dpi;
     }
 
     @Override
@@ -44,13 +61,13 @@ public class Widgets extends SettingsPreferenceFragment {
 
     private void updateList() {
 
-        Applications.AppInfo[] items = Applications.getWidgetList(mContext);
+        Applications.CyanfoxAppInfo[] items = Applications.getApplicationList(mContext, getDpi());
 
-        mWidgetList.removeAll();
+        mAppList.removeAll();
 
         for (int i = 0; i < items.length; i++) {
             Preference pref = new Preference(mContext);
-            Applications.AppInfo bAppInfo = items[i];
+            Applications.CyanfoxAppInfo bAppInfo = items[i];
 
             pref.setKey(bAppInfo.pack);
             pref.setTitle(bAppInfo.name);
@@ -61,11 +78,11 @@ public class Widgets extends SettingsPreferenceFragment {
 
                 public boolean onPreferenceClick(final Preference preference) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
-                    alert.setTitle(R.string.widget_alert_remove_widget);
+                    alert.setTitle(R.string.dpi_groups_alert_remove_app);
 
                     String title = (String) preference.getTitle();
 
-                    String summary = mContext.getResources().getString(R.string.widget_remove_widget,
+                    String summary = mContext.getResources().getString(R.string.dpi_groups_remove_app,
                             new Object[] { title });
 
                     alert.setMessage(summary);
@@ -74,7 +91,7 @@ public class Widgets extends SettingsPreferenceFragment {
 
                         public void onClick(DialogInterface dialog, int whichButton) {
                             dialog.dismiss();
-                            Applications.removeWidget(mContext, preference.getKey());
+                            Applications.removeApplication(mContext, preference.getKey());
                             updateList();
                         }
                     });
@@ -90,7 +107,7 @@ public class Widgets extends SettingsPreferenceFragment {
                     return false;
                 }
             });
-            mWidgetList.addPreference(pref);
+            mAppList.addPreference(pref);
         }
     }
 }

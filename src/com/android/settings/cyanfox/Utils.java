@@ -1,4 +1,4 @@
-package com.android.settings.hybrid;
+package com.android.settings.cyanfox;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -17,7 +17,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.PowerManager;
-import android.provider.Settings;
 
 import com.android.settings.R;
 
@@ -26,8 +25,14 @@ public class Utils {
     public static final String MOUNT_SYSTEM_RW = "busybox mount -o rw,remount /system";
     public static final String MOUNT_SYSTEM_RO = "busybox mount -o ro,remount /system";
 
-    public static Iterator<Object> sortedIterator(Iterator<Object> it, Comparator<Object> comparator) {
-        List<Object> list = new ArrayList<Object>();
+    private static Context mContext;
+
+    public static void setContext(Context mc) {
+        mContext = mc;
+    }
+
+    public static Iterator sortedIterator(Iterator it, Comparator comparator) {
+        List list = new ArrayList();
         while (it.hasNext()) {
             list.add(it.next());
         }
@@ -95,20 +100,19 @@ public class Utils {
         }
     }
 
-    public static void restartUI(Context mc) {
-//        execute(new String[] { "pkill -TERM -f com.android.systemui" }, 0);
-        Settings.System.putInt(mc.getContentResolver(), Settings.System.USER_INTERFACE_STATE, 1);
+    public static void restartUI() {
+        execute(new String[] { "pkill -TERM -f com.android.systemui" }, 0);
     }
 
-    public static void reboot(final Context mc) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(mc);
+    public static void reboot() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
         alert.setTitle(R.string.alert_reboot);
-        alert.setMessage(mc.getString(R.string.alert_reboot_message));
+        alert.setMessage(mContext.getString(R.string.alert_reboot_message));
         alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int whichButton) {
                 dialog.dismiss();
-                PowerManager pm = (PowerManager) mc.getSystemService(Context.POWER_SERVICE);
+                PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
                 pm.reboot("Settings Triggered Reboot");
             }
         });
