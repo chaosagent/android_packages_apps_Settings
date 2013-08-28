@@ -318,16 +318,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         screenTimeoutPreference.setEnabled(revisedEntries.size() > 0);
     }
 
-    private void updateCustomLabelTextSummary() {
-        mCustomLabelText = Settings.System.getString(getActivity().getContentResolver(),
-                Settings.System.CUSTOM_CARRIER_LABEL);
-        if (mCustomLabelText == null || mCustomLabelText.length() == 0) {
-            mCustomLabel.setSummary(R.string.custom_carrier_label_notset);
-        } else {
-            mCustomLabel.setSummary(mCustomLabelText);
-        }
-    } 
-
     @Override
     public void onResume() {
         super.onResume();
