@@ -134,7 +134,7 @@
                 android:title="@string/listview_interpolator_title"
                 android:entries="@array/listview_interpolator_entries"
                 android:entryValues="@array/listview_interpolator_values"
-                android:defaultValue="7" />
+                android:defaultValue="5" />
 
         </PreferenceScreen>
 
