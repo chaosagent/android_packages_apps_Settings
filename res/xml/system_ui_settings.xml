@@ -46,6 +46,11 @@
                 android:key="navigation_bar"
                 android:fragment="com.android.settings.cyanogenmod.NavBar"
                 android:title="@string/navigation_bar_title" />
+                
+            <PreferenceScreen
+                android:key="navbar_settings"
+                android:fragment="com.android.settings.cyanogenmod.NavBarSettings"
+                android:title="@string/navigation_bar" />      
 
             <PreferenceScreen
                 android:key="navigation_ring"
@@ -129,7 +134,7 @@
                 android:title="@string/listview_interpolator_title"
                 android:entries="@array/listview_interpolator_entries"
                 android:entryValues="@array/listview_interpolator_values"
-                android:defaultValue="7" />
+                android:defaultValue="5" />
 
         </PreferenceScreen>
 

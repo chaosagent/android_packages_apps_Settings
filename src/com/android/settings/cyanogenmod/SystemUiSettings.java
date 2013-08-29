@@ -30,6 +30,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.IWindowManager;
 import android.view.WindowManagerGlobal;
 
 import com.android.settings.R;
@@ -38,6 +39,9 @@ import com.android.settings.cyanogenmod.RamBar;
 import com.android.settings.Utils;
 import com.android.settings.util.CMDProcessor;
 import com.android.settings.util.Helpers;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SystemUiSettings extends SettingsPreferenceFragment  implements
         Preference.OnPreferenceChangeListener {
@@ -54,6 +58,10 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_GENERAL_OPTIONS = "general_settings_options_prefs";
     private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
     private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
+
+    private static final String KEY_NAVIGATION_BAR = "navigation_bar";
+    private static final String KEY_NAVIGATION_RING = "navigation_ring";
+    private static final String KEY_NAVIGATION_BAR_CATEGORY = "navigation_bar_category";
 
     private PreferenceScreen mPieControl;
     private ListPreference mExpandedDesktopPref;
@@ -118,25 +126,23 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         int expandedDesktopValue = Settings.System.getInt(getContentResolver(),
                 Settings.System.EXPANDED_DESKTOP_STYLE, 0);
 
+        // Hide no-op "Status bar visible" mode on devices without navbar
         try {
-            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
-
-            // Hide no-op "Status bar visible" mode on devices without navigation bar
-            if (hasNavBar) {
+            if (WindowManagerGlobal.getWindowManagerService().hasNavigationBar()) {
                 mExpandedDesktopPref.setOnPreferenceChangeListener(this);
                 mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
                 updateExpandedDesktop(expandedDesktopValue);
-                generalUi.removePreference(mExpandedDesktopNoNavbarPref);
+                prefScreen.removePreference(mExpandedDesktopNoNavbarPref);
             } else {
-                mExpandedDesktopNoNavbarPref.setOnPreferenceChangeListener(this);
-                mExpandedDesktopNoNavbarPref.setChecked(expandedDesktopValue > 0);
-                generalUi.removePreference(mExpandedDesktopPref);
-            }
-
-            // Hide navigation bar category on devices without navigation bar
-            if (!hasNavBar) {
-                generalUi.removePreference(findPreference(CATEGORY_NAVBAR));
-                mPieControl = null;
+        // enable "Status bar visible" mode on devices without navbar
+        // even in devices with no nav bar support by default
+                mExpandedDesktopPref.setOnPreferenceChangeListener(this);
+                mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
+                updateExpandedDesktop(expandedDesktopValue);
+                prefScreen.removePreference(mExpandedDesktopNoNavbarPref);
+                //mExpandedDesktopNoNavbarPref.setOnPreferenceChangeListener(this);
+                //mExpandedDesktopNoNavbarPref.setChecked(expandedDesktopValue > 0);
+                //prefScreen.removePreference(mExpandedDesktopPref);
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
@@ -186,10 +192,12 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
             int expandedDesktopValue = Integer.valueOf((String) objValue);
             updateExpandedDesktop(expandedDesktopValue);
             return true;
+        /*
         } else if (preference == mExpandedDesktopNoNavbarPref) {
             boolean value = (Boolean) objValue;
             updateExpandedDesktop(value ? 2 : 0);
             return true;
+        */
         }
         return false;
     }
