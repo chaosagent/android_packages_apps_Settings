@@ -171,17 +171,17 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
              Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                   Settings.System.STATUS_BAR_TRAFFIC_ENABLE, value ? 1 : 0);
              Helpers.restartSystemUI();
-             
+             return true;
         } else if (preference == mStatusBarTraffic_hide) {
             value = mStatusBarTraffic_hide.isChecked();
              Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                   Settings.System.STATUS_BAR_TRAFFIC_HIDE, value ? 1 : 0);
-           
+             return true;
         } else if (preference == mStatusBarQuickPeek) {
             value = mStatusBarQuickPeek.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUSBAR_PEEK, value ? 1 : 0);
- 
+            return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
