@@ -1296,13 +1296,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Shortcut picker -->
     <string name="use_custom_app_title">Use custom application</string>
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
-    <string name="group_applications">Applications</string> 
-
-    <!-- Alternate default app picker -->
-    <string name="display_short">Display</string>
-    <string name="misc_short">Misc</string>
-    <string name="alt_resolver">Use alternative apps grid</string>
-    <string name="alt_resolver_summary">Use alternate default apps picker</string>
+    <string name="group_applications">Applications</string>
 
     <!-- Quick access ribbon -->
     <string name="category_quick_access">Quick Access ribbon</string>

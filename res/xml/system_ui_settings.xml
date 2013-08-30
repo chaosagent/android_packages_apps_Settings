@@ -86,12 +86,6 @@
             android:key="recents_ram_bar"
             android:fragment="com.android.settings.cyanogenmod.RamBar"
             android:title="@string/ram_bar" />
-        
-        <CheckBoxPreference
-            android:key="use_alt_resolver"
-            android:title="@string/alt_resolver"
-            android:summary="@string/alt_resolver_summary"
-            android:defaultValue="false" />
 
     </PreferenceCategory>
 

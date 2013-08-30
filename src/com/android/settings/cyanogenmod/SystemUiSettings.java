@@ -56,7 +56,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
     private static final String KEY_GENERAL_OPTIONS = "general_settings_options_prefs";
     private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
-    private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
 
     private static final String KEY_NAVIGATION_BAR = "navigation_bar";
     private static final String KEY_NAVIGATION_RING = "navigation_ring";
@@ -68,7 +67,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
     private Preference mRamBar;
-    private CheckBoxPreference mUseAltResolver;
    
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -98,12 +96,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         mRamBar = findPreference(KEY_RECENTS_RAM_BAR);
         mRamBar.setOnPreferenceChangeListener(this);
         updateRamBar();
-    
-        //UseAltResolver
-        mUseAltResolver = (CheckBoxPreference) findPreference(PREF_USE_ALT_RESOLVER);
-        mUseAltResolver.setChecked(Settings.System.getInt(
-                getActivity().getContentResolver(),
-                Settings.System.ACTIVITY_RESOLVER_USE_ALT, 0) == 1);
 
         final PreferenceCategory generalUi =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_GENERAL_UI);
@@ -207,13 +199,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-            Preference preference) {
-        if (preference == mUseAltResolver) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.ACTIVITY_RESOLVER_USE_ALT,
-                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
-            return true;
-        }       
+            Preference preference) {    
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
