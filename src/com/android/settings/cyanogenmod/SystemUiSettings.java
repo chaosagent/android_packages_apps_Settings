@@ -54,7 +54,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_PIE_CONTROL = "pie_control";
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
-    private static final String KEY_DUAL_PANE = "dual_pane"; 
     private static final String KEY_GENERAL_OPTIONS = "general_settings_options_prefs";
     private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
     private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
@@ -68,7 +67,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
-    private CheckBoxPreference mDualPane;
     private Preference mRamBar;
     private CheckBoxPreference mUseAltResolver;
    
@@ -106,14 +104,6 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         mUseAltResolver.setChecked(Settings.System.getInt(
                 getActivity().getContentResolver(),
                 Settings.System.ACTIVITY_RESOLVER_USE_ALT, 0) == 1);
-
-        //Dual Pane Settings
-        mDualPane = (CheckBoxPreference) findPreference(KEY_DUAL_PANE);
-        boolean preferDualPane = getResources().getBoolean(
-                com.android.internal.R.bool.preferences_prefer_dual_pane);
-        boolean dualPaneMode = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.DUAL_PANE_PREFS, (preferDualPane ? 1 : 0)) == 1;
-        mDualPane.setChecked(dualPaneMode);
 
         final PreferenceCategory generalUi =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_GENERAL_UI);
@@ -218,12 +208,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
-        if (preference == mDualPane) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.DUAL_PANE_PREFS,
-                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
-            return true;
-        } else if (preference == mUseAltResolver) {
+        if (preference == mUseAltResolver) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.ACTIVITY_RESOLVER_USE_ALT,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
