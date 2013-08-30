@@ -128,21 +128,23 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
 
         // Hide no-op "Status bar visible" mode on devices without navbar
         try {
-            if (WindowManagerGlobal.getWindowManagerService().hasNavigationBar()) {
+            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
+
+            if (hasNavBar) {
                 mExpandedDesktopPref.setOnPreferenceChangeListener(this);
                 mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
                 updateExpandedDesktop(expandedDesktopValue);
-                prefScreen.removePreference(mExpandedDesktopNoNavbarPref);
+                generalUi.removePreference(mExpandedDesktopNoNavbarPref);
             } else {
-        // enable "Status bar visible" mode on devices without navbar
-        // even in devices with no nav bar support by default
-                mExpandedDesktopPref.setOnPreferenceChangeListener(this);
-                mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
-                updateExpandedDesktop(expandedDesktopValue);
-                prefScreen.removePreference(mExpandedDesktopNoNavbarPref);
-                //mExpandedDesktopNoNavbarPref.setOnPreferenceChangeListener(this);
-                //mExpandedDesktopNoNavbarPref.setChecked(expandedDesktopValue > 0);
-                //prefScreen.removePreference(mExpandedDesktopPref);
+                mExpandedDesktopNoNavbarPref.setOnPreferenceChangeListener(this);
+                mExpandedDesktopNoNavbarPref.setChecked(expandedDesktopValue > 0);
+                generalUi.removePreference(mExpandedDesktopPref);
+            }
+
+            // Hide navigation bar category on devices without navigation bar
+            if (!hasNavBar) {
+                generalUi.removePreference(findPreference(CATEGORY_NAVBAR));
+                mPieControl = null;
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
@@ -192,12 +194,10 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
             int expandedDesktopValue = Integer.valueOf((String) objValue);
             updateExpandedDesktop(expandedDesktopValue);
             return true;
-        /*
         } else if (preference == mExpandedDesktopNoNavbarPref) {
             boolean value = (Boolean) objValue;
             updateExpandedDesktop(value ? 2 : 0);
             return true;
-        */
         }
         return false;
     }
