@@ -1190,7 +1190,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="halo_enabled_summary">Completely enable or disable HALO</string>
     <string name="halo_title">HALO)))</string>
     <string name="halo_title_summary">Choose any app to show floating mode. It triggers a persistent notification</string>
-    <string name="halo_settings_title">HALO Settings</string>
+    <string name="halo_settings_title">HALO settings</string>
     <string name="halo_settings_summary">Configure halo options</string> 
     <string name="app_halo_label_black">Blacklist HALO notifications</string>
     <string name="app_halo_label_white">Whitelist HALO notifications</string> 
@@ -1269,62 +1269,26 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- General UI -->
     <string name="misc_short">Misc</string>
     <string name="title_ui">General UI</string>
-    <string name="title_ui_summary">Change the LCD Density</string>  
-
-    <!-- LCD Density -->
-    <string name="dpi">DPI</string>
-    <string name="lcd_density_title">LCD Density</string>
-    <string name="lcd_density_summary">unknown</string>
-    <string name="current_lcd_density">"Current LCD Density: "</string>
-    <string name="lcd_density_wizard">LCD Density Wizard</string>
-    <string name="follow_through_title">Follow through!</string>
-    <string name="follow_through_summary">Make sure you follow the steps one-by-one and complete each one before proceeding to the next.</string>
-    <string name="stock_density_title">1. Change LCD Density to stock value</string>
-    <string name="stock_density_summary">Tablets and older phones use 160. Most phones use 240. Galaxy Nexus uses 320 by default.</string>
-    <string name="stock_density_changed_summary">"Density set to: "</string>
-    <string name="reboot_title">2. Reboot!</string>
-    <string name="reboot_summary">Come back here after the reboot and complete the rest of the steps!</string>
-    <string name="clear_market_data_title">3. Clear all relevant market data.</string>
-    <string name="clear_market_data_summary">This step clears data from market, google play services and google services framework.</string>
-    <string name="clear_market_data_cleared">Data successfully cleared</string>
-    <string name="clear_market_data_donot_cleared">"Data couldn't be cleared, please clear it yourself!"</string>
-    <string name="reboot_cleardata_title">4. Reboot!</string>
-    <string name="reboot_cleardata_summary">Come back here after the reboot and complete the rest of the steps!</string>
-    <string name="open_market_title">5. Open Market and hit accept</string>
-    <string name="open_market_summary">Press back when done to return here.</string>
-    <string name="open_market_summary_could_not_open">"Couldn't open the market! If you're sure it's installed, open it yourself from the launcher."</string>
-    <string name="custom_density_title">6. Change density to whatever you like!</string>
-    <string name="custom_density_summary">If you ever have compatibility issues with the market, be sure to return here and repeat the process.</string>
-    <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
-    <string name="stock_density">320 stock</string> 
-    <string name="custom_density">custom</string>
-    <string name="set_custom_density_title">Set custom density</string>
-    <string name="set_custom_density_set">Set</string>
-    <string name="custom_density_dialog_title">"WARNING!"</string>
-    <string name="custom_density_dialog_summary">"Changing your LCD density can cause unexpected app behavior. If you encounter market app incompatibility please return here and restart the process from step 1."</string>
-    <string name="custom_density_dialog_button_got">Got it!</string>
-    <string name="custom_density_dialog_button_reboot">Reboot now</string>
-    <string name="select_custom_app_title">Select custom application</string>
 
     <!-- App sidebar -->
-    <string name="app_sidebar_title">Appbar</string>
-    <string name="app_sidebar_enable_title">Enable Appbar</string>
-    <string name="app_sidebar_summary">Customize your app sidebar</string>
-    <string name="app_sidebar_enable_summaryOn">Appbar is enabled</string>
-    <string name="app_sidebar_enable_summaryOff">Appbar is disabled</string>
-    <string name="app_sidebar_setup_items_title">Setup Appbar content</string>
-    <string name="app_sidebar_setup_items_summary">Add, remove, and position items in the appbar</string>
-    <string name="app_sidebar_transparency_title">Appbar transparency</string>
-    <string name="app_sidebar_transparency_summary">Adjust the Appbar transparency level</string>
-    <string name="app_sidebar_position_title">Appbar position</string>
-    <string name="app_sidebar_position_summary">Position the Appbar on the left or right side of the screen</string>
+    <string name="app_sidebar_title">Apps sidebar</string>
+    <string name="app_sidebar_enable_title">Enable apps sidebar</string>
+    <string name="app_sidebar_summary">Customize your apps sidebar</string>
+    <string name="app_sidebar_enable_summaryOn">Apps sidebar is enabled</string>
+    <string name="app_sidebar_enable_summaryOff">Apps sidebar is disabled</string>
+    <string name="app_sidebar_setup_items_title">Setup apps sidebar content</string>
+    <string name="app_sidebar_setup_items_summary">Add, remove, and position items in the apps sidebar</string>
+    <string name="app_sidebar_transparency_title">Apps sidebar transparency</string>
+    <string name="app_sidebar_transparency_summary">Adjust the apps sidebar transparency level</string>
+    <string name="app_sidebar_position_title">Apps sidebar position</string>
+    <string name="app_sidebar_position_summary">Position the apps sidebar on the left or right side of the screen</string>
     <string name="app_sidebar_position_left">Left</string>
     <string name="app_sidebar_position_right">Right</string>
     <string name="app_sidebar_hide_labels_title">Hide icon labels</string>
-    <string name="app_sidebar_hide_labels_summary">Hide Appbar icon labels</string>
-    <string name="tab_category">Visible Tab</string>
+    <string name="app_sidebar_hide_labels_summary">Hide apps sidebar icon labels</string>
+    <string name="tab_category">Visible tab</string>
     <string name="use_tab_title">Display tab</string>
-    <string name="use_tab_summary">Display a visible tab on the side which will display the appbar when touched.</string>
+    <string name="use_tab_summary">Display a visible tab on the side which will display the apps sidebar when touched.</string>
     <string name="tab_position_title">Tab location</string>
     <string name="tab_position_summary">Display the tab on the top, middle, or bottom on the side of the screen.</string>
     <string name="tab_size_title">Tab size</string>
@@ -1345,8 +1309,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Alternate default app picker -->
     <string name="display_short">Display</string>
     <string name="misc_short">Misc</string>
-    <string name="alt_resolver">Use Alt Default App Grid</string>
-    <string name="alt_resolver_summary">Use Alternate Default App Picker</string>
+    <string name="alt_resolver">Use alternative apps grid</string>
+    <string name="alt_resolver_summary">Use alternate default apps picker</string>
 
     <!-- Quick access ribbon -->
     <string name="category_quick_access">Quick Access ribbon</string>
@@ -1355,10 +1319,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="summary_quick_access_linked">Use the same tiles and layout as the Quick Settings panel</string>
     
     <!-- Font size sample text. Keep this string SMALL! No more than six characters long. -->
-    <string name="font_size_sample">Sample</string> 
-
-    <!-- Font size sample text. This needs to be a very short string, as it is shown in
-    multiple font sizes in a limited amount of space. -->
     <string name="font_size_sample">Sample</string>
 
 </resources>
