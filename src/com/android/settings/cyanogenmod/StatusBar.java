@@ -35,7 +35,6 @@ import com.android.settings.Utils;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
-    private static final String STATUS_BAR_CLOCK_CATEGORY = "category_status_bar_clock";
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUS_BAR_BATTERY = "status_bar_battery";
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
@@ -85,7 +84,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 Settings.System.STATUS_BAR_TRAFFIC_HIDE, 1) == 1));
 
         if (DateFormat.is24HourFormat(getActivity())) {
-            ((PreferenceCategory) prefSet.findPreference(STATUS_BAR_CLOCK_CATEGORY))
+            ((PreferenceCategory) prefSet.findPreference(STATUS_BAR_CATEGORY_GENERAL))
                     .removePreference(prefSet.findPreference(STATUS_BAR_AM_PM));
         } else {
             mStatusBarAmPm = (ListPreference) prefSet.findPreference(STATUS_BAR_AM_PM);
