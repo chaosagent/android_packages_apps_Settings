@@ -1263,24 +1263,24 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_ui">General UI</string>
 
     <!-- App sidebar -->
-    <string name="app_sidebar_title">Apps sidebar</string>
-    <string name="app_sidebar_enable_title">Enable apps sidebar</string>
-    <string name="app_sidebar_summary">Customize your apps sidebar</string>
-    <string name="app_sidebar_enable_summaryOn">Apps sidebar is enabled</string>
-    <string name="app_sidebar_enable_summaryOff">Apps sidebar is disabled</string>
-    <string name="app_sidebar_setup_items_title">Setup apps sidebar content</string>
-    <string name="app_sidebar_setup_items_summary">Add, remove, and position items in the apps sidebar</string>
-    <string name="app_sidebar_transparency_title">Apps sidebar transparency</string>
-    <string name="app_sidebar_transparency_summary">Adjust the apps sidebar transparency level</string>
-    <string name="app_sidebar_position_title">Apps sidebar position</string>
-    <string name="app_sidebar_position_summary">Position the apps sidebar on the left or right side of the screen</string>
+    <string name="app_sidebar_title">Apps bar</string>
+    <string name="app_sidebar_enable_title">Enable apps bar</string>
+    <string name="app_sidebar_summary">Customize your apps bar</string>
+    <string name="app_sidebar_enable_summaryOn">Apps bar is enabled</string>
+    <string name="app_sidebar_enable_summaryOff">Apps bar is disabled</string>
+    <string name="app_sidebar_setup_items_title">Setup apps bar content</string>
+    <string name="app_sidebar_setup_items_summary">Add, remove, and position items in the apps bar</string>
+    <string name="app_sidebar_transparency_title">Apps bar transparency</string>
+    <string name="app_sidebar_transparency_summary">Adjust the apps bar transparency level</string>
+    <string name="app_sidebar_position_title">Apps bar position</string>
+    <string name="app_sidebar_position_summary">Position the apps bar on the left or right side of the screen</string>
     <string name="app_sidebar_position_left">Left</string>
     <string name="app_sidebar_position_right">Right</string>
     <string name="app_sidebar_hide_labels_title">Hide icon labels</string>
-    <string name="app_sidebar_hide_labels_summary">Hide apps sidebar icon labels</string>
+    <string name="app_sidebar_hide_labels_summary">Hide apps bar icon labels</string>
     <string name="tab_category">Visible tab</string>
     <string name="use_tab_title">Display tab</string>
-    <string name="use_tab_summary">Display a visible tab on the side which will display the apps sidebar when touched.</string>
+    <string name="use_tab_summary">Display a visible tab on the side which will display the apps bar when touched.</string>
     <string name="tab_position_title">Tab location</string>
     <string name="tab_position_summary">Display the tab on the top, middle, or bottom on the side of the screen.</string>
     <string name="tab_size_title">Tab size</string>
