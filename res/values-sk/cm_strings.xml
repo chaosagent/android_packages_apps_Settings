@@ -415,7 +415,7 @@
     <string name="power_menu_airplane_title">Režim V lietadle</string>
     <string name="power_menu_user_title">Prepínač užívateľov</string>
     <string name="power_menu_sound_title">Panel hlasitosti</string>
-    <string name="cmupdate_settings_title">Aktualizácie CyanogenMod</string>
+    <string name="cmupdate_settings_title">Aktualizácie CyanFox</string>
     <string name="cmupdate_settings_summary">Skontrolujte, zobrazte alebo nainštalujte dostupné aktualizácie</string>
     <string name="advanced_settings_title">Pokročilé</string>
     <string name="ime_switcher_notify">Oznámenie pre výber vstupnej metódy</string>

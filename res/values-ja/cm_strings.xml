@@ -342,23 +342,23 @@
     <string name="pref_use_16bpp_alpha_title">16ビット透過</string>
     <string name="pref_use_16bpp_alpha_summary">16ビット透過を使用することでスクロールのパフォーマンスが向上しますが、低品質で稀に不自然に見えます(
 要再起動)</string>
-    <string name="anonymous_statistics_title">CyanogenMod 利用統計</string>
-    <string name="anonymous_statistics_summary">CyanogenMod をより良くするための匿名利用統計報告をオプトインする</string>
+    <string name="anonymous_statistics_title">CyanFox 利用統計</string>
+    <string name="anonymous_statistics_summary">CyanFox をより良くするための匿名利用統計報告をオプトインする</string>
     <string name="anonymous_statistics_warning_title">利用統計について</string>
-    <string name="anonymous_statistics_warning">匿名利用状況の送信を許諾することによって、CyanogenModの開発者がデバイス単位のユニークインストール数を追跡することができます。
+    <string name="anonymous_statistics_warning">匿名利用状況の送信を許諾することによって、CyanFoxの開発者がデバイス単位のユニークインストール数を追跡することができます。
                 送信される情報にはユニークIDが含まれますが、これはあなたの個人情報、端末のタイプ及びバージョン情報とは結びつきません。
                 データ送信は端末の起動時に毎回行われ、送信されるデータの例はプレビューをクリックすることにより確認できます。</string>
     <string name="enable_reporting_title">リポートを有効にする</string>
     <string name="preview_data_title">データのプレビュー</string>
     <string name="view_stats_title">ステータスを見る</string>
     <string name="anonymous_learn_more">詳細</string>
-    <string name="anonymous_notification_desc">CyanogenMod 利用統計を有効/無効にする</string>
+    <string name="anonymous_notification_desc">CyanFox 利用統計を有効/無効にする</string>
     <string name="preview_id_title">ユニークID</string>
     <string name="preview_device_title">デバイス</string>
     <string name="preview_version_title">バージョン</string>
     <string name="preview_country_title">国</string>
     <string name="preview_carrier_title">キャリア</string>
-    <string name="mod_version">CyanogenMod バージョン</string>
+    <string name="mod_version">CyanFox バージョン</string>
     <string name="mod_version_default">不明</string>
     <string name="build_date">ビルド日時</string>
     <string name="adb_over_network">ADBオーバーネットワーク</string>
@@ -446,7 +446,7 @@
     <string name="volume_key_cursor_control_off">無効</string>
     <string name="volume_key_cursor_control_on">音量アップ/ダウンでカーソルを左/右に移動する</string>
     <string name="volume_key_cursor_control_on_reverse">音量アップ/ダウンでカーソルを右/左に移動する</string>
-    <string name="cmupdate_settings_title">CyanogenModアップデート</string>
+    <string name="cmupdate_settings_title">CyanFoxアップデート</string>
     <string name="cmupdate_settings_summary">利用できるアップデートのチェック、表示及びインストール</string>
     <string name="app_security_title">アプリのセキュリティ</string>
     <string name="sms_security_check_limit_title">SMSメッセージ制限</string>
@@ -527,7 +527,7 @@
     <string name="headset_connect_player_summary">ヘッドセットを接続した時に標準の音楽アプリを起動する</string>
     <string name="safe_headset_volume_title">安全なヘッドセット音量</string>
     <string name="cyanogenmod_waiver_title">権利放棄</string>
-    <string name="cyanogenmod_waiver_body">この設定の変更は条例や法律に反しているかもしれません。\n\n\ここで\'OK\'を選択した場合、あなたはこの警告及び権利の放棄、CyanogenModとその貢献者に対する全ての法的責任からの免責に同意したことになります。</string>
+    <string name="cyanogenmod_waiver_body">この設定の変更は条例や法律に反しているかもしれません。\n\n\ここで\'OK\'を選択した場合、あなたはこの警告及び権利の放棄、CyanFoxとその貢献者に対する全ての法的責任からの免責に同意したことになります。</string>
     <string name="auto_brightness_setup_title">自動明るさ調整</string>
     <string name="auto_brightness_adjustment_title">明るさの調整</string>
     <string name="auto_brightness_twilight_adjustment">日の出と日没に合わせて調整</string>
