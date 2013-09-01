@@ -32,6 +32,7 @@ import android.util.Log;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.util.Helpers;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -166,19 +167,20 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         boolean value;
         if (preference == mStatusBarTraffic_enable) {
             value = mStatusBarTraffic_enable.isChecked();
-             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                  Settings.System.STATUS_BAR_TRAFFIC_ENABLE, value ? 1 : 0);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_TRAFFIC_ENABLE, value ? 1 : 0);
+            Helpers.restartSystemUI();
             return true;
         } else if (preference == mStatusBarTraffic_hide) {
             value = mStatusBarTraffic_hide.isChecked();
-             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                  Settings.System.STATUS_BAR_TRAFFIC_HIDE, value ? 1 : 0);
-            return true; 
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_TRAFFIC_HIDE, value ? 1 : 0);
+            return true;
         } else if (preference == mStatusBarQuickPeek) {
             value = mStatusBarQuickPeek.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUSBAR_PEEK, value ? 1 : 0);
-            return true; 
+            return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }

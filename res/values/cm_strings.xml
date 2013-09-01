@@ -1303,8 +1303,16 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_quick_access">Show in drawer</string>
     <string name="title_quick_access_linked">Linked layout</string>
     <string name="summary_quick_access_linked">Use the same tiles and layout as the Quick Settings panel</string>
-    
+
     <!-- Font size sample text. Keep this string SMALL! No more than six characters long. -->
     <string name="font_size_sample">Sample</string>
+
+    <!-- Development Tools - Enable Navigation Bar -->
+    <string name="force_navigation_bar_title">Force Navigation bar</string>
+    <string name="force_navigation_bar_summary">Show additional on-screen navigation buttons</string>
+    <string name="menu_button_enabled">Menu button enabled</string>
+    <string name="menu_button_enabled_summary">Respond to user input via the hardware Menu button</string>
+    <string name="back_button_enabled">Back button enabled</string>
+    <string name="back_button_enabled_summary">Respond to user input via the hardware Back button</string>
 
 </resources>
