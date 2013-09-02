@@ -73,6 +73,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarQuickPeek.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUSBAR_PEEK, 0) == 1));
 
+        if (statusBarAutoHideValue == 0) {
+	        mStatusBarQuickPeek.setEnabled(false);
+        }
+        else {
+	        mStatusBarQuickPeek.setEnabled(true);
+        }
+
         mStatusBarAmPm = (ListPreference) prefSet.findPreference(STATUS_BAR_AM_PM);
         mStatusBarBattery = (ListPreference) prefSet.findPreference(STATUS_BAR_BATTERY);
         mStatusBarCmSignal = (ListPreference) prefSet.findPreference(STATUS_BAR_SIGNAL);
