@@ -989,7 +989,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Interface titles -->
     <string name="general_ui">General UI</string>
-    <string name="improved_ui">Improved UI</string>
     <string name="advanced_ui">Advanced UI</string>
 
     <!-- Recents Ram Bar -->

@@ -67,8 +67,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="improved_ui"
-        android:title="@string/improved_ui" >
+        android:key="advanced_ui"
+        android:title="@string/advanced_ui" >
 
         <PreferenceScreen
             android:key="halo"
@@ -86,24 +86,6 @@
             android:key="recents_ram_bar"
             android:fragment="com.android.settings.cyanogenmod.RamBar"
             android:title="@string/ram_bar" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="advanced_ui"
-        android:title="@string/advanced_ui" >
-
-        <CheckBoxPreference
-            android:key="expanded_desktop_no_navbar"
-            android:title="@string/power_menu_expanded_desktop"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="expanded_desktop"
-            android:title="@string/power_menu_expanded_desktop"
-            android:entries="@array/expanded_desktop_entries"
-            android:entryValues="@array/expanded_desktop_values"
-            android:persistent="false" />
 
         <PreferenceScreen
             android:key="container"
@@ -126,6 +108,18 @@
                 android:defaultValue="5" />
 
         </PreferenceScreen>
+
+        <CheckBoxPreference
+            android:key="expanded_desktop_no_navbar"
+            android:title="@string/power_menu_expanded_desktop"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="expanded_desktop"
+            android:title="@string/power_menu_expanded_desktop"
+            android:entries="@array/expanded_desktop_entries"
+            android:entryValues="@array/expanded_desktop_values"
+            android:persistent="false" />
 
     </PreferenceCategory>
 
