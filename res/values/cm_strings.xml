@@ -1043,42 +1043,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="set">Set</string>
     <string name="hex">Hex:</string>
     <string name="color_default">Default</string> 
-
-    <!-- Status bar | Clock -->
-    <string name="status_bar_style_title">Style</string>
-    <string name="status_bar_clock">Clock and date</string>
-    <string name="status_bar_clock_title">Clock and date style</string>
-    <string name="clock_title_enable">Clock alignment</string>
-    <string name="clock_enabled">Enabled</string>
-    <string name="clock_disabled">Disabled</string>
-    <string name="clock_color_title">Clock color</string>
-    <string name="status_bar_clock_style_reset">Reset color</string> 
-    <string name="status_bar_show_clock_title">Show clock</string>
-    <string name="status_bar_am_pm_title">AM/PM style</string>
-    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
-    <string name="enable_clock_weekday">Day of the week</string>
-    <string name="enable_clock_weekday_summary">Abbreviated day of the week before the time</string>
-    <string name="right_clock">Right clock</string>
-    <string name="center_clock">Center clock</string>
-    <string name="dont_show">Don\'t show</string>
-    <string name="clock_date_display">Date</string>
-    <string name="clock_date_display_summary">Display custom date before the clock</string>
-    <string name="clock_date_style">Date style</string>
-    <string name="clock_date_format">Date format</string>
-    <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
-    <string name="clock_date_string_edittext_summary">Enter string</string>
-
-    <!-- Circle battery custom osptions -->
-    <string name="circle_mod_cat">Circle battery options</string>
-    <string name="circle_battery_color">Circle color</string>
-    <string name="circle_battery_text_color">Circle text color</string>
-    <string name="circle_battery_animation_speed">Circle animation speed</string>
-    <string name="circle_battery_animation_speed_none">None</string>
-    <string name="circle_battery_animation_speed_slow">Slow</string>
-    <string name="circle_battery_animation_speed_stock">Normal</string>
-    <string name="circle_battery_animation_speed_fast">Fast</string>
-    <string name="status_bar_battery_circle_style_reset">Reset battery circle colors</string>
-    <string name="status_bar_battery_bar_style_reset">Reset battery bar colors</string>       
     
     <!-- Wakeup When Plugged -->
     <string name="wakeup_when_plugged_unplugged_title">Wake up on charger</string>
@@ -1095,16 +1059,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Statusbar Quick Peek -->
     <string name="statusbar_quick_peek_title">Quick Peek</string>
     <string name="statusbar_quick_peek_summary">Peek at statusbar by swiping from top edge of screen</string>
-
-    <!-- Pie colors -->
-    <string name="pie_control_color_settings">Pie Color Settings</string>
-    <string name="pie_control_color_normal">Normal background</string>
-    <string name="pie_control_color_selected">Selected background</string>
-    <string name="pie_control_color_longpressed">Long pressed background</string>
-    <string name="pie_control_color_icon">Icon color</string>
-    <string name="pie_control_outline">Show outline</string>
-    <string name="pie_control_color_title">Edit color setting</string>
-    <string name="pie_control_color_reset">Reset</string>
 
     <!-- Navigation bar custom options -->
     <string name="navbar_cat">Navigation bar settings</string>
@@ -1155,32 +1109,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_alpha_mode_always">always</string>
     <string name="status_bar_style_reset">Reset</string>   
 
-    <!-- Notification Drawer Settings -->
-    <string name="notification_style_grouptitle">Style</string>
-    <string name="notification_style_title">Notification drawer style</string>
-    <string name="notification_style_summary">Change your notification drawer style</string> 
-
-    <!-- Notification drawer background -->
-    <string name="notification_wallpaper_title">Notification drawer background</string>
-    <string name="notification_wallpaper_landscape_title">Different landscape background</string>
-    <string name="notification_background_color_fill">Color fill</string>
-    <string name="notification_background_custom_image">Custom image</string>
-    <string name="notification_background_default_wallpaper">Default background</string>
-    <string name="notification_drawer_custom_background_dialog_title">Choose color</string>
-    <string name="notif_wallpaper_alpha_title">Notification background transparency</string> 
-    <string name="notif_alpha_title">Notification Rows transparency</string>  
-
-    <!-- Notification Behavior -->
-    <string name="notification_behaviour_title">Notification behavior</string>
-    <string name="additional_options_title">Notification behavior options</string> 
-
-    <!-- Notification drawer brigthness slider -->
-    <string name="power_widget_additional_options_cat">Additional options</string>
-    <string name="brightness_location_title">Brightness slider location</string>
-    <string name="brightness_slider_top">On top</string>
-    <string name="brightness_slider_bottom">On the bottom</string>
-    <string name="brightness_slider_none">Do not Show</string> 
-
     <!-- HALO -->
     <string name="halo_enabled_title">Enable HALO</string>
     <string name="halo_enabled_summary">Completely enable or disable HALO</string>
@@ -1224,28 +1152,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="halo_style_title">Style</string>
     <string name="halo_active_title">Activity</string>
 
-    <!-- Advanced low battery indicator options -->  
-    <string name="pref_low_battery_warning_policy_title">Low battery warning</string>
-    <string name="pref_low_battery_warning_policy_dialog_title">Indicate low battery warning with</string>
-    <string name="low_battery_warning_policy_popup_sound">Pop-up and sound</string>
-    <string name="low_battery_warning_policy_notif_sound">Notification and sound</string>
-    <string name="low_battery_warning_policy_popup">Pop-up dialog only</string>
-    <string name="low_battery_warning_policy_notif">Notification only</string>
-    <string name="low_battery_warning_policy_sound">Sound only</string>
-    <string name="low_battery_warning_policy_disabled">Disabled</string>
-
-    <!-- Quick puldown modes -->
-    <string name="no_notifications_pulldown_summary_nonperm">Pulldown quick settings if no non-permanent notifications are present</string>
-    <string name="no_notifications_pulldown_summary_all">Pulldown quick settings if no notifications are present</string>
-    <string name="no_notifications_pulldown_off">Off</string>
-    <string name="no_notifications_pulldown_nonperm">Non-permanent only</string>
-    <string name="no_notifications_pulldown_all">All Notifications</string>
-    <string name="title_no_notifications_pulldown">Quick pulldown without notifications</string>      
- 
-    <!-- Screen-On Notification Light -->
-    <string name="screen_on_notification_led_title">Screen-On Notification Light</string>
-    <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on</string>
-
     <!-- Network speed -->
     <string name="enable_network_speed">Network speed indicator</string>
     <string name="enable_network_speed_summary">Show network speed in statusbar</string>
@@ -1257,10 +1163,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="network_speed_color_style">Color style</string>
     <string name="network_speed_color_reset">Reset</string>
     <string name="network_speed_color_summary">Change the color of network speed indicator</string>    
-
-    <!-- General UI -->
-    <string name="misc_short">Misc</string>
-    <string name="title_ui">General UI</string>
 
     <!-- App sidebar -->
     <string name="app_sidebar_title">Apps bar</string>
@@ -1293,11 +1195,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
-    <!-- Shortcut picker -->
-    <string name="use_custom_app_title">Use custom application</string>
-    <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
-    <string name="group_applications">Applications</string>
-
     <!-- Quick access ribbon -->
     <string name="category_quick_access">Quick Access ribbon</string>
     <string name="title_quick_access">Show in drawer</string>
@@ -1314,5 +1211,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="menu_button_enabled_summary">Respond to user input via the hardware Menu button</string>
     <string name="back_button_enabled">Back button enabled</string>
     <string name="back_button_enabled_summary">Respond to user input via the hardware Back button</string>
+    
+    <!-- Shortcut picker -->
+    <string name="use_custom_app_title">Use custom application</string>
+    <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
+    <string name="group_applications">Applications</string>
 
 </resources>
