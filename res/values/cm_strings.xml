@@ -1215,6 +1215,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Shortcut picker -->
     <string name="use_custom_app_title">Use custom application</string>
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
-    <string name="group_applications">Applications</strin
+    <string name="group_applications">Applications</string>
 
 </resources>
