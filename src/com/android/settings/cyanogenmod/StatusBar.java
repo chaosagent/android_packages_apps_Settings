@@ -164,6 +164,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.AUTO_HIDE_STATUSBAR, statusBarAutoHideValue);
             updateStatusBarAutoHideSummary(statusBarAutoHideValue);
+            if (statusBarAutoHideValue == 0) {
+	           mStatusBarQuickPeek.setEnabled(false);
+            }
+            else {
+    	        mStatusBarQuickPeek.setEnabled(true);
+            }
             return true;
         }
 
