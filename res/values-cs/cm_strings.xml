@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2013 The CyannogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -842,4 +842,7 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
     <string name="summary_quick_access_linked">Použít stejné dlaždice a rozmístění jako u panelu rychlého nastavení</string>
 
     <string name="font_size_sample">Ukázka</string>
+
+    <string name="selinux_enable_title">Android s rozšířenou bezpečností</string>
+    <string name="selinux_enable_warning">Chystáte se povolit SEAndroid - bezpečnostní rozšíření operačního systému Android.\n\nTato volba je dostupná pouze pro účely vývoje a je velice pravděpodobné, že Vaše zařízení není plně připraveno pro tuto funkci. To může způsobit, že část (nebo všechen) hardware zařízení bude zablokován nebo nebude fungovat správně.\n\nOpravdu chcete pokračovat?</string>
 </resources>
