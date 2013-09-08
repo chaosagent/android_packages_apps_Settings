@@ -519,14 +519,10 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="headset_connect_player_summary">Standaardmuziek-app openen indien headset wordt aangesloten</string>
     <string name="safe_headset_volume_title">Veilig headsetvolume</string>
     <string name="cyanogenmod_waiver_title">Afstandsverklaring</string>
-<<<<<<< HEAD
     <string name="cyanogenmod_waiver_body">Het wijzigen van deze instelling kan in overtreding zijn met de regelgeving in uw staat/land.\n\nDoor te tikken op \'OK\' erkent u deze waarschuwing en doet u afstand van en vrijwaart u CyanFox en/of haar bijdragers van alle wettelijke verplichtingen</string>
-=======
-    <string name="cyanogenmod_waiver_body">Het wijzigen van deze instelling kan in overtreding zijn met de regelgeving in uw staat/land.\n\nDoor te tikken op \'OK\' erkent u deze waarschuwing en doet u afstand van en vrijwaart u CyanogenMod en/of haar bijdragers van alle wettelijke verplichtingen</string>
     <string name="auto_brightness_setup_title">Automatische helderheid</string>
     <string name="auto_brightness_adjustment_title">Helderheid aanpassen</string>
     <string name="auto_brightness_twilight_adjustment">Aanpassen aan zonsopgang en zonsondergang</string>
->>>>>>> 655c818411c98d80e8bc46af77441301871fd76f
     <string name="light_sensor_current_value">Huidige lichtsensorwaarde: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Autom. helderheidsstanden</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>

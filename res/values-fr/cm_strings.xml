@@ -705,9 +705,5 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
     <string name="title_quick_access">Afficher avec les notifications</string>
     <string name="title_quick_access_linked">Lier la disposition</string>
     <string name="summary_quick_access_linked">Utiliser les mêmes raccourcis et la même disposition que le volet des paramètres</string>
-<<<<<<< HEAD
-</resources>
-=======
     <string name="font_size_sample">Exemple</string>
 </resources>
->>>>>>> 655c818411c98d80e8bc46af77441301871fd76f
