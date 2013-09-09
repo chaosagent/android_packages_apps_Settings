@@ -113,12 +113,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
 
         // Hide no-op "Status bar visible" mode on devices without navbar
         try {
-            // Only show the navigation bar category on devices that has a navigation bar
-            // unless we are forcing it via development settings
-            boolean forceNavbar = android.provider.Settings.System.getInt(getContentResolver(),
-                    android.provider.Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) == 1;
-            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar()
-                    || forceNavbar;
+            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
 
             if (hasNavBar) {
                 mExpandedDesktopPref.setOnPreferenceChangeListener(this);
