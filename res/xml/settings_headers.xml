@@ -69,18 +69,18 @@
         android:fragment="com.android.settings.cyanogenmod.SystemUiSettings"
         android:title="@string/system_settings_title" />
 
-    <!-- Homescreen -->
-    <header
-        android:id="@+id/homescreen_settings"
-        android:title="@string/homescreen_settings_title"
-        android:icon="@drawable/ic_settings_cmlauncher" />
+	<!-- Homescreen -->
+	<header
+		android:id="@+id/homescreen_settings"
+		android:title="@string/homescreen_settings_title"
+		android:icon="@drawable/ic_settings_cmlauncher" />
 
-    <!-- Lock screen -->
-    <header
-        android:id="@+id/lock_screen_settings"
-        android:fragment="com.android.settings.cyanogenmod.LockscreenInterface"
-        android:title="@string/lock_screen_title"
-        android:icon="@drawable/ic_settings_lockscreen" />
+	<!-- Lock screen -->
+	<header
+		android:id="@+id/lock_screen_settings"
+		android:fragment="com.android.settings.cyanogenmod.LockscreenInterface"
+		android:title="@string/lock_screen_title"
+		android:icon="@drawable/ic_settings_lockscreen" />
 
     <!-- TRDS -->
     <header
@@ -119,6 +119,7 @@
 
     <!-- Buttons -->
     <header
+        android:id="@+id/button_settings"
         android:icon="@drawable/ic_settings_buttons"
         android:fragment="com.android.settings.cyanogenmod.ButtonSettings"
         android:title="@string/button_settings" />
@@ -190,13 +191,6 @@
         android:icon="@drawable/ic_settings_security"
         android:title="@string/security_settings_title"
         android:id="@+id/security_settings" />
-
-    <!-- App Ops -->
-    <header
-        android:id="@+id/application_settings"
-        android:fragment="com.android.settings.applications.AppOpsSummary"
-        android:icon="@drawable/ic_privacy_guard"
-        android:title="@string/app_ops_settings" />	
 
     <!-- Language -->
     <header
